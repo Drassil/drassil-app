@@ -16,6 +16,7 @@ app.config(['$routeProvider','$locationProvider','$ngxtProvider',function($route
     .when("/site/it/azerothshard.html",       ngxt.routeComponent({templateUrl: "site/it/azerothshard.html", scriptUrls: deps, reloadOnSearch: false}) )
     .when("/site/it/warcraft_tales.html",      ngxt.routeComponent({templateUrl: "site/it/warcraft_tales.html", scriptUrls: deps, reloadOnSearch: false}) )
     .when("/site/en/newage.html",   ngxt.routeComponent({templateUrl: "site/en/newage.html", scriptUrls: deps, reloadOnSearch: false}) )
+    .when("/site/en/server-status.html",   ngxt.routeComponent({templateUrl: "/site/en/server-status.html", scriptUrls: deps, reloadOnSearch: false}) )
     .when("/site/en/home.html",   ngxt.routeComponent({templateUrl: "site/en/home.html", scriptUrls: deps, reloadOnSearch: false}) )
     .otherwise(               {redirectTo: '/site/en/home.html'});
         
