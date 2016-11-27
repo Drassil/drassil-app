@@ -1,0 +1,3 @@
+[submodule "dist"]
+	path = dist
+	url = https://gitlab.com/drassil/launcher-release.git

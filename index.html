@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Drassil Launcher</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+
+        <base href="/">
+
+        <!-- webcomponent polyfill activated! -->
+        <script src="modules/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+        <!-- angular framework -->
+        <script src="modules/angularjs/1_5/angular.js"></script>
+        <script src="modules/angularjs/1_5/angular-route.js"></script>
+        <script src="modules/bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
+        <script src="modules/bower_components/angular-video-bg/angular-video-bg.min.js"></script>
+        <!-- Drassil App -->
+        <script src="src/hwcConf.js"></script>
+        <script src="modules/hw-core/js-modules/requirejs/requirejs/index.js"></script>
+        <script src="modules/hw-core/js-kernel/index.js"></script>
+        <script src="modules/angular-xt/plugin/index.js"></script>
+        <script src="src/app.js"></script>
+        <link  href="src/css/style.css" rel="stylesheet" type="text/css">
+        <!-- load our web components -->
+        <link rel="import" href="src/components/main-footer.html">
+        <link rel="import" href="src/components/main-header.html">
+        <!-- Global 3d-party modules -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="modules/bootstrap/js/bootstrap.min.js"></script>
+        <link href="modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div ng-app="DrassilApp">
+            <drassil-header></drassil-header>
+            <div ng-view><!-- dynamic content --></div>
+            <drassil-footer></drassil-footer>
+        </div>
+    </body>
+</html>
