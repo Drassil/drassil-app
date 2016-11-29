@@ -31,6 +31,18 @@ Drassil.checkFirstStart = function() {
     DrassilEct.api.checkFirstStart();
 };
 
+Drassil.getLauncherVersion = function() {
+    DrassilEct.api.getLauncherVersion();
+};
+
+Drassil.saveSettings = function() {
+    DrassilEct.api.saveSettings();
+};
+
+Drassil.setFolderPlaceholder = function() {
+    DrassilEct.api.setFolderPlaceholder();
+};
+
 Drassil.launchWoW = function(realm) {
     DrassilEct.api.launchWoW(realm);
 };
