@@ -1,0 +1,13 @@
+{
+  "name": "drassil-app-web",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --progress --profile --colors"
+  },
+  "dependencies": {
+    "script-loader": "*"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
