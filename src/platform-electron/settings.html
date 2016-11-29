@@ -32,25 +32,25 @@
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 					<!--<li class="active"><a href="#">Home</a></li>-->
-					<li class="active"><a href="#" onclick="Drassil.settingsOpen()">Settings</a></li>
-					<li><a href="#" onclick="Drassil.openAbout('newage')">About us</a></li>
-					<li><a href="#" onclick="Drassil.openForum('newage')">Forum</a></li>
+					<li class="active"><a href="#" onclick="settingsOpen()">Settings</a></li>
+					<li><a href="#" onclick="openAbout('newage')">About us</a></li>
+					<li><a href="#" onclick="openForum('newage')">Forum</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><div class="draggable"></div><li>
-					<li><a btn href="javascript:void(0)" id="min-btn" onclick="Drassil.AppMinimize()"><span class="glyphicon glyphicon-chevron-down"></span></a></li>
-					<li><a btn href="javascript:void(0)" id="close-btn" onclick="Drassil.AppClose()"><span class="glyphicon glyphicon-remove"></span></a></li>
+					<li><a btn href="javascript:void(0)" id="min-btn" onclick="AppMinimize()"><span class="glyphicon glyphicon-chevron-down"></span></a></li>
+					<li><a btn href="javascript:void(0)" id="close-btn" onclick="AppClose()"><span class="glyphicon glyphicon-remove"></span></a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="Drassil.selectWoWFolder()"><div id="selectFolderButton">SELECT FOLDER</div></a></div>
+			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="selectWoWFolder()"><div id="selectFolderButton">SELECT FOLDER</div></a></div>
 			<div class="col-lg-3 col-md-4 col-sm-5 col-xs-6"><input id="wowFolder" type="text" name="text" placeholder="Select WoW folder" readonly="readonly" /></div>
 		</div>
 		<div class="row">
-			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="Drassil.saveSettings()"><div id="selectFolderButton">SAVE</div></a></div>
+			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="saveSettings()"><div id="selectFolderButton">SAVE</div></a></div>
 			<div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-restart">Launcher must be restarted manually after setting the folder</span></div>
 			<div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-version">Launcher version:</span></div>
 			<div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-dev">Designed by Jestus</span></div>
