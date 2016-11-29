@@ -27,6 +27,10 @@ Drassil.settingsOpen = function() {
     DrassilEct.api.settingsOpen();
 };
 
+Drassil.checkFirstStart = function() {
+    DrassilEct.api.checkFirstStart();
+};
+
 Drassil.launchWoW = function(realm) {
     DrassilEct.api.launchWoW(realm);
 };
