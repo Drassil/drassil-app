@@ -27,24 +27,8 @@ Drassil.settingsOpen = function() {
     DrassilEct.api.settingsOpen(Drassil);
 };
 
-Drassil.selectWoWFolder = function() {
-    DrassilEct.api.selectWoWFolder();
-};
-
 Drassil.checkFirstStart = function() {
     DrassilEct.api.checkFirstStart();
-};
-
-Drassil.getLauncherVersion = function() {
-    DrassilEct.api.getLauncherVersion();
-};
-
-Drassil.saveSettings = function() {
-    DrassilEct.api.saveSettings();
-};
-
-Drassil.setFolderPlaceholder = function() {
-    DrassilEct.api.setFolderPlaceholder();
 };
 
 Drassil.launchWoW = function(realm) {
