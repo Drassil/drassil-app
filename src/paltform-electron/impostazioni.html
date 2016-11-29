@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="loading">
+  <head>
+    <meta charset="UTF-8">
+    <title>Drassil Launcher</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>window.$ = window.jQuery = require('../js/jquery.min.js');</script>
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet" type="text/css">
+	<link href="../css/azs.css" rel="stylesheet" type="text/css">
+	<link href="../css/settings.css" rel="stylesheet" type="text/css">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+	<script src="../js/script.js"></script>
+	<script src="../js/settings.js"></script>
+  </head>
+  <body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">Drassil Launcher</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<!--<li class="active"><a href="#">Home</a></li>-->
+					<li class="active"><a href="#" onclick="settings()">Impostazioni</a></li>
+					<li><a href="#" onclick="openAboutDrassil()">Chi siamo</a></li>
+					<li><a href="#" onclick="openForumDrassil()">Forum</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><div class="draggable"></div><li>
+					<li><a btn href="javascript:void(0)" id="min-btn" onclick="AppMinimize()"><span class="glyphicon glyphicon-chevron-down"></span></a></li>
+					<li><a btn href="javascript:void(0)" id="close-btn" onclick="AppClose()"><span class="glyphicon glyphicon-remove"></span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="selectWoWFolder()"><div id="selectFolderButton">SELEZIONA CARTELLA</div></a></div>
+			<div class="col-lg-3 col-md-4 col-sm-5 col-xs-6"><input id="wowFolder" type="text" name="text" placeholder="Seleziona cartella WoW" readonly="readonly" /></div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="saveSettings()"><div id="selectFolderButton">SALVA</div></a></div>
+			<div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-restart">IL launcher deve essere riavviato manualmente dopo aver impostato la cartella</span></div>
+			<div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-version">Launcher Version:</span></div>
+			<div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-dev">Designed by Jestus</span></div>
+			<!--<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><input id="ClearCacheCheckbox" type="checkbox" name="ClearCache"><label for ClearCacheCheckbox>Clear Cache</label></div>-->
+		</div>
+	</div>
+  </body>
+  <script>
+	$( "html" ).removeClass( "loading" );
+	getLauncherVer();
+  </script>
+</html>

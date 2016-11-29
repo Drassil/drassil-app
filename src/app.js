@@ -1,9 +1,3 @@
-/*if (window["angular"] == null) {
-    var url = window.location.protocol + '//' + window.location.host + '/#' + window.location.pathname + window.location.hash;
-    window.location.replace(url);
-    throw new Error("Abort!");
-}*/
-
 var app=angular.module("DrassilApp",["ngRoute",'angular-loading-bar','angularVideoBg',"AngularXT"]);
 
 app.config(['$routeProvider','$locationProvider','$ngxtProvider',function($routeProvider,$locationProvider,$ngxtProvider){
@@ -11,6 +5,8 @@ app.config(['$routeProvider','$locationProvider','$ngxtProvider',function($route
     
     var deps=[
     ];
+       
+    deps.push("src/platform-"+Drassil.PLATFORM+"/api.js");
         
     $routeProvider
     .when("/site/it/azerothshard.html",       ngxt.routeComponent({templateUrl: "site/it/azerothshard.html", scriptUrls: deps, reloadOnSearch: false}) )
@@ -32,7 +28,7 @@ app.run(function($rootScope) {
     });*/
 });
 
-window.registerComponent = function(name, withShadow) {
+window.registerComponent = function(name, withShadow,callback) {
     // native : polyfill
     var mainDoc = document._currentScript ? document._currentScript.ownerDocument : document.currentScript.ownerDocument;
 
@@ -43,6 +39,7 @@ window.registerComponent = function(name, withShadow) {
         // Grab DOM from doc.html's document.
         var text = mainDoc.querySelector("#" + name);
         element.innerHTML = text.cloneNode(true).innerHTML;
+        callback && callback();
     };
 
     document.registerElement(name, {prototype: proto});

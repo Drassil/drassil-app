@@ -5,9 +5,12 @@
         <title>Drassil Launcher</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
-
-        <base href="/">
-
+        <!-- [START] Workaround for browsers scripts under electron ( work in browser too )  -->
+        <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+        <!-- initial -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="src/defines.js"></script>
+        <script src="src/init.js"></script>
         <!-- webcomponent polyfill activated! -->
         <script src="modules/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
         <!-- angular framework -->
@@ -26,9 +29,10 @@
         <link rel="import" href="src/components/main-footer.html">
         <link rel="import" href="src/components/main-header.html">
         <!-- Global 3d-party modules -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="modules/bootstrap/js/bootstrap.min.js"></script>
         <link href="modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- [END] Workaround for browsers scripts under electron ( work in browser too ) -->
+        <script>if (window.module) module = window.module;</script>
     </head>
     <body>
         <div ng-app="DrassilApp">

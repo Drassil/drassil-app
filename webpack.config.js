@@ -6,6 +6,8 @@ hwc_conf.paths.hwc_js_kernel_loader=hwc_conf.paths.hwc_js_kernel;
 
 module.exports = {
   entry: [
+        './src/defines.js',
+        './src/init.js',
         "modules/bower_components/webcomponentsjs/webcomponents-lite.js",
         "modules/angularjs/1_5/angular.js",
         "modules/angularjs/1_5/angular-route.js",
@@ -15,7 +17,7 @@ module.exports = {
         "src/assets/bootstrap/js/bootstrap.min.js",
         conf_path,
         './modules/angular-xt/plugin/index.js',
-        './src/hw2site.js'
+        './src/app.js'
   ],
   output: {
     path: 'output',
