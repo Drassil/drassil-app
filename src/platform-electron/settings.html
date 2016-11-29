@@ -14,6 +14,9 @@
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://app.drassil.net/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        var Drassil = electron.remote.getGlobal('sharedObj').Drassil;
+    </script>
   </head>
   <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -31,7 +34,7 @@
 					<!--<li class="active"><a href="#">Home</a></li>-->
 					<li class="active"><a href="#" onclick="Drassil.settingsOpen()">Settings</a></li>
 					<li><a href="#" onclick="Drassil.openAbout('newage')">About us</a></li>
-					<li><a href="#" onclick="Drassil.openForum('newage)">Forum</a></li>
+					<li><a href="#" onclick="Drassil.openForum('newage')">Forum</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><div class="draggable"></div><li>
