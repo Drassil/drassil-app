@@ -24,8 +24,7 @@ Drassil.openAbout = function(realm) {
 };
 
 Drassil.settingsOpen = function() {
-    electron.remote.getGlobal('sharedObj').Drassil = Drassil;
-    DrassilEct.api.settingsOpen();
+    DrassilEct.api.settingsOpen(Drassil);
 };
 
 Drassil.selectWoWFolder = function() {
@@ -62,4 +61,8 @@ Drassil.clearCache = function() {
 
 Drassil.setRealm = function(realm) {
     DrassilEct.api.setRealm(realm);
+};
+
+Drassil.getNews = function() {
+    DrassilEct.api.getNews();
 };
