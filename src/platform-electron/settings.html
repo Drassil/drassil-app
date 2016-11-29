@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <title>Drassil Launcher</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>window.$ = window.jQuery = require('./app-framework/modules/jquery/jquery.min.js');</script>
-    <script>
-        var loc = window.location.pathname;
-        var dir = loc.substring(0, loc.lastIndexOf('/'));
-    </script>
+    <script>window.$ = window.jQuery = require('./../../modules/jquery/jquery.min.js');</script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
 	<link href="http://app.drassil.net/modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="http://app.drassil.net/src/css/style.css" rel="stylesheet" type="text/css">
@@ -19,7 +15,6 @@
     <script src="http://app.drassil.net/modules/bootstrap/js/bootstrap.min.js"></script>
     <script>
         var electron = require("electron");
-        var Drassil = electron.remote.getGlobal('Drassil');
         var mySettings = electron.remote.require('./drassil-app/settings.js');
     </script>
   </head>
