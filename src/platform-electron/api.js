@@ -38,3 +38,7 @@ Drassil.resetWoW = function() {
 Drassil.clearCache = function() {
     DrassilEct.api.clearCache();
 };
+
+Drassil.setRealm = function(realm) {
+    DrassilEct.api.setRealm(realm);
+};
