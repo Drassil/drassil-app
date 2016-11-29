@@ -56,11 +56,11 @@
         </div>
         <div class="row">
             <div class="col-lg-6 col-md-8 visible-lg visible-md">
-                <a class="sidebar-btn" id="site-btn" href="#" onclick="openSite()"><div><span>Site</span></div></a>
-                <a class="sidebar-btn" id="forum-btn" href="#" onclick="openForum()"><div><span>Forum</span></div></a>
-                <a class="sidebar-btn" id="about-btn" href="#" onclick="openAbout()"><div><span>About us</span></div></a>
-                <a class="sidebar-btn" id="cache-btn" href="#" onclick="clearCache()"><div><span>Clear Cache</span></div></a>
-                <a class="sidebar-btn hidden2" id="play-btn" href="#" onclick="launchWoW('newage')"><div><span>Play</span></div></a>
+                <a class="sidebar-btn" id="site-btn" href="#" onclick="Drassil.openSite('newage')"><div><span>Site</span></div></a>
+                <a class="sidebar-btn" id="forum-btn" href="#" onclick="Drassil.openForum('newage')"><div><span>Forum</span></div></a>
+                <a class="sidebar-btn" id="about-btn" href="#" onclick="Drassil.openAbout('newage')"><div><span>About us</span></div></a>
+                <a class="sidebar-btn" id="cache-btn" href="#" onclick="Drassil.clearCache()"><div><span>Clear Cache</span></div></a>
+                <a class="sidebar-btn hidden2" id="play-btn" href="#" onclick="Drassil.launchWoW('newage')"><div><span>Play</span></div></a>
                 <div class="collapse" id="hide"></div>
             </div>
         </div>
@@ -78,8 +78,5 @@
                 <div class="collapse" id="hide"></div>
             </div>
         </div>
-        <script>
-            $("html").removeClass("loading");
-        </script>
     </body>
 </html>
