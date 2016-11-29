@@ -13,7 +13,7 @@
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://app.drassil.net/modules/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./drassil-app/settings.js"></script>
+    <script src="./settings.js"></script>
     <script>
         var electron = require("electron");
         var Drassil = electron.remote.getGlobal('Drassil');
@@ -35,8 +35,8 @@
 				<ul class="nav navbar-nav">
 					<!--<li class="active"><a href="#">Home</a></li>-->
 					<li class="active"><a href="#" onclick="settingsOpen()">Impostazioni</a></li>
-					<li><a href="#" onclick="Drassil.openAbout('azs')">Chi siamo</a></li>
-					<li><a href="#" onclick="Drassil.openForum('azs')">Forum</a></li>
+					<li><a href="#" onclick="Drassil.openAbout('drassil')">Chi siamo</a></li>
+					<li><a href="#" onclick="Drassil.openForum('drassil')">Forum</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><div class="draggable"></div><li>
