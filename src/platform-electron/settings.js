@@ -1,14 +1,11 @@
 const {BrowserWindow} = require('electron').remote;
-settingsWin = BrowserWindow.getFocusedWindow();
-    
-function getWoWFolder()
-{
-    var settings = require('electron-settings');
-    settings.get('wowFolder.wowFolder').then(val => {
-            if(val != undefined)
-                $("#wowFolder").attr("placeholder", val.toString());
-    })
-}
+settingsWin = BrowserWindow.getFocusedWindow(); 
+var settings = require('electron-settings');
+
+settings.get('wowFolder.wowFolder').then(val => {
+    if(val != undefined)
+        $("#wowFolder").attr("placeholder", val.toString());
+});
     
 function appClose()
 {
