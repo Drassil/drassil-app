@@ -17,8 +17,8 @@
     <script>
         var electron = require("electron");
         var Drassil = electron.remote.getGlobal('Drassil');
-        var mySettings = electron.remote.require('./drassil-app/settings.js');
     </script>
+    <script src="http://app.drassil.net/src/platform-electron/settings.js"></script>
   </head>
   <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -61,7 +61,6 @@
 	</div>
   </body>
   <script>
-    getWoWFolder();
     getLauncherVer();
   </script>
   <script>if (window.module) module = window.module;</script>
