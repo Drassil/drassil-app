@@ -7,9 +7,8 @@
         <meta name="keywords" content="New Age,WoW,Warcraft">
         <link href="src/css/newage.css" rel="stylesheet" type="text/css">
         <script>
-            window.Drassil.realm="newage";
-        </script>
-        <script>
+            var Drassil = window.Drassil;
+            Drassil.realm="newage";
             Drassil.checkFirstStart();
         </script>
     </head>
@@ -81,5 +80,8 @@
                 <div class="collapse" id="hide"></div>
             </div>
         </div>
+        <script>
+            Drassil.parseNews(Drassil.defines[Drassil.realm].news_json);
+        </script>
     </body>
 </html>

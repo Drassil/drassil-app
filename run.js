@@ -1,31 +1,12 @@
-function run(host,port,dev) {
-    var options = {};
+var run = require("./run-module.js");
 
-    if (dev) {
-        var fs = require("fs");
-        var express = require("express");
-        options = {
-            index: "index-dev.html"
-        };
+var type=process.argv[2];
 
-        var expr = express();
-        expr.use(express.static(__dirname, options)); //use static files in ROOT/public folder
-
-        expr.get("/", function (request, response) { //root dir
-        });
-
-        expr.listen(port, host);
-    } else {
-        var WebpackDevServer = require("webpack-dev-server");
-        var webpack = require("webpack");
-        var config = require(__dirname+"/webpack.config.js");
-        var compiler = webpack(config);
-        var server = new WebpackDevServer(compiler, {
-            contentBase: __dirname,
-            hot: true
-        });
-        server.listen(port, host);
-    }
+var run_conf=null;
+try {
+    var run_conf = require("./run-conf.js");
+} catch(e) {
+    var run_conf = require("./run-conf.def.js");
 }
 
-module.exports=run;
+run(run_conf.host,run_conf.port, type === "dev");

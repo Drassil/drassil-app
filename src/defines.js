@@ -11,7 +11,8 @@ Drassil.defines={
         "website" : "http://wownewage.com",
         "forum" : "http://community.wownewage.com",
         "about" : "http://wownewage.com/about",
-        "settings" : "http:/app.drassil.net/src/platform-electron/settings.html"
+        "settings" : "http:/app.drassil.net/src/platform-electron/settings.html",
+        "news_json" : "http://developer.wownewage.com/index.php/articles/?&limit=6&by=id&order=desc",
     },
     "drassil" : {
         "website" : "http://warcraft.drassil.net",

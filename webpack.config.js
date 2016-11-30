@@ -16,6 +16,7 @@ module.exports = {
         "modules/bootstrap/js/bootstrap.min.js",
         conf_path,
         'modules/angular-xt/plugin/index.js',
+        'src/functions.js',
         'src/app.js'
     ],
     output: {

@@ -2,14 +2,12 @@
   "name": "drassil-app-web",
   "scripts": {
     "build": "webpack --config webpack.config.js --progress --profile --colors",
-    "start" : "node -e \"var run=require('./run.js'); run('localhost',8000);\"",
-    "start-dev" : "node -e \"var run=require('./run.js'); run('localhost',8000,true);\""
-  },
-  "dependencies": {
-    "script-loader": "*"
+    "start": "node run.js",
+    "start-dev": "node run.js dev"
   },
   "devDependencies": {
     "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2"
+    "browser-sync": "^2.18.2",
+    "script-loader": "*"
   }
 }

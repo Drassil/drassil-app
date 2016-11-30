@@ -52,7 +52,8 @@
 	__webpack_require__(6);
 	__webpack_require__(7);
 	__webpack_require__(8);
-	module.exports = __webpack_require__(40);
+	__webpack_require__(40);
+	module.exports = __webpack_require__(41);
 
 
 /***/ },
@@ -38997,8 +38998,39 @@
 /* 40 */
 /***/ function(module, exports) {
 
-	var app=angular.module("DrassilApp",["ngRoute",'angular-loading-bar','angularVideoBg',"AngularXT"]);
+	var Drassil = window.Drassil;
 	
+	Drassil.parseNews = function(url) {
+	
+	    $.getJSON( url, function( data ) {
+	      var title = [];
+	      var content = [];
+	      $.each( data, function( key, val ) {
+	            //console.log("key: "+key+" val:"+val['headline'])
+	        title.push(val['headline'].substring(12, val['headline'].length-2));
+	            content.push(val['content']);
+	      });
+	
+	            for (var i = 0; i < title.length; i++) {
+	                    document.getElementById("title-"+[i+1]).innerHTML = title[i];
+	                    document.getElementById("content-"+[i+1]).innerHTML = content[i];
+	            };
+	    });
+	
+	    $(document).ready(function() {
+	        $('.hidden2').fadeOut(1);
+	        $('.title, .content').removeClass('hidden');
+	        $('.title, .content').delay(1500).fadeIn(1000);
+	    });
+	};
+
+
+/***/ },
+/* 41 */
+/***/ function(module, exports) {
+
+	var app=angular.module("DrassilApp",["ngRoute",'angular-loading-bar','angularVideoBg',"AngularXT"]);
+	alert("ok");
 	app.config(['$routeProvider','$locationProvider','$ngxtProvider',function($routeProvider,$locationProvider,$ngxtProvider){
 	    var ngxt=$ngxtProvider;
 	    
