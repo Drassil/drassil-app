@@ -8,6 +8,23 @@ var appVersion = appFramework.getConf("version");
 //var appParams 				=		"?version="+appVersion+"&platform=phonegap&phoneID=" + appDeviceId + "&deviceplatform=" + appDevicePlatform;
 var origUrl = appDomainUrl; //+ appParams;
 
+
+// *
+// * This function allows us to call methods from child iframe 
+// * you can call it using:
+// * parent.postMessage("one-string", "*");
+// *
+// * Note: this method is async
+// *
+appFramework.setMsgListener(function (e) {
+    switch(e.data) {
+        case "appClose":
+            navigator.app.exitApp();
+        break;
+    }
+});
+
+
 // run external app
 appFramework.loadExternal({
     onReady: function () {
@@ -15,5 +32,7 @@ appFramework.loadExternal({
         appFramework.setConf("url", origUrl);
     }
 });
+
+
 
 //# sourceURL=remote-main.js
