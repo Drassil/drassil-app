@@ -23,7 +23,7 @@ Drassil.openAbout = function(realm) {
     DrassilEct.api.openAbout(realm);
 };
 
-Drassil.settingsOpen = function() {
+Drassil.settingsOpen = function(Drassil) {
     DrassilEct.api.settingsOpen(Drassil);
 };
 

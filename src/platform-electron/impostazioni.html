@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <title>Drassil Launcher</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>window.$ = window.jQuery = require('./jquery.min.js');</script>
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
 	<link href="http://app.drassil.net/modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="http://app.drassil.net/src/css/style.css" rel="stylesheet" type="text/css">
 	<link href="http://app.drassil.net/src/css/azs.css" rel="stylesheet" type="text/css">
 	<link href="http://app.drassil.net/src/css/settings.css" rel="stylesheet" type="text/css">
+    <script src="http://app.drassil.net/modules/jquery/jquery.min.js"></script>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://app.drassil.net/modules/bootstrap/js/bootstrap.min.js"></script>
     <script>
         var electron = require("electron");
         var Drassil = electron.remote.getGlobal('Drassil');
-        var settings = require('electron-settings');
     </script>
-    <script src="./settings.js"></script>
+    <script src="http://app.drassil.net/src/platform-electron/settings.js"></script>
   </head>
   <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -40,8 +40,8 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><div class="draggable"></div><li>
-					<li><a btn href="javascript:void(0)" id="min-btn" onclick="Drassil.appMinimize()"><span class="glyphicon glyphicon-chevron-down"></span></a></li>
-					<li><a btn href="javascript:void(0)" id="close-btn" onclick="Drassil.appClose()"><span class="glyphicon glyphicon-remove"></span></a></li>
+					<li><a btn href="javascript:void(0)" id="min-btn" onclick="appMinimize()"><span class="glyphicon glyphicon-chevron-down"></span></a></li>
+					<li><a btn href="javascript:void(0)" id="close-btn" onclick="appClose()"><span class="glyphicon glyphicon-remove"></span></a></li>
 				</ul>
 			</div>
 		</div>
@@ -63,4 +63,5 @@
   <script>
     getLauncherVer();
   </script>
+  <script>if (window.module) module = window.module;</script>
 </html>

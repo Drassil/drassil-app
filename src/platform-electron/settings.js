@@ -1,7 +1,21 @@
+const {BrowserWindow} = require('electron').remote;
+settingsWin = BrowserWindow.getFocusedWindow(); 
+this.settings = require('electron-settings');
+
 settings.get('wowFolder.wowFolder').then(val => {
-		if(val != undefined)
-			$("#wowFolder").attr("placeholder", val.toString());
-})
+    if(val != undefined)
+        $("#wowFolder").attr("placeholder", val.toString());
+});
+    
+function appClose()
+{
+    settingsWin.close();
+}
+
+function appMinimize()
+{
+    settingsWin.minimize();
+}
 
 function selectWoWFolder(){
 	const {dialog} = require('electron').remote
@@ -19,8 +33,6 @@ function getLauncherVer()
 
 
 function saveSettings(){
-	const settings = require('electron-settings');
-
 	settings.setSync('wowFolder', {
 		'wowFolder': wowFolder[0]
 	});
