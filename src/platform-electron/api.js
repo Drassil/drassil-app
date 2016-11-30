@@ -24,7 +24,7 @@ Drassil.openAbout = function(realm) {
 };
 
 Drassil.settingsOpen = function() {
-    DrassilEct.api.settingsOpen(Drassil, settings);
+    DrassilEct.api.settingsOpen(Drassil);
 };
 
 Drassil.checkFirstStart = function() {

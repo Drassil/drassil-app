@@ -1,5 +1,6 @@
 const {BrowserWindow} = require('electron').remote;
 settingsWin = BrowserWindow.getFocusedWindow(); 
+this.settings = require('electron-settings');
 
 settings.get('wowFolder.wowFolder').then(val => {
     if(val != undefined)
