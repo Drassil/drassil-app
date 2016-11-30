@@ -24,7 +24,8 @@ Drassil.defines={
 
 
 // dynamic base
-document.write("<base href='//"+document.location.host +'/'+location.pathname+"' />");
+console.log("//"+document.location.host +location.pathname);
+document.write("<base href='//"+document.location.host + location.pathname+"' />");
 
 if (window && window.cordova) {
     //
