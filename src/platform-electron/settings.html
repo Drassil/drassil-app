@@ -17,7 +17,7 @@
     <script>
         var electron = require("electron");
         var Drassil = electron.remote.getGlobal('Drassil');
-        var settings = require('electron-settings');
+        var remote = require("electron").remote;
         var mySettings = electron.remote.require('./drassil-app/settings.js');
     </script>
     <script>if (window.module) module = window.module;</script>
