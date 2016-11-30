@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var run = require("./run-module.js");
 
 var type=process.argv[2];
