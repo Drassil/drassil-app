@@ -1,6 +1,6 @@
 const {BrowserWindow} = require('electron').remote;
 settingsWin = BrowserWindow.getFocusedWindow(); 
-var settings = require('electron-settings');
+const settings = window.require("electron-settings");
 
 settings.get('wowFolder.wowFolder').then(val => {
     if(val != undefined)
@@ -33,8 +33,6 @@ function getLauncherVer()
 
 
 function saveSettings(){
-	const settings = require('electron-settings');
-
 	settings.setSync('wowFolder', {
 		'wowFolder': wowFolder[0]
 	});
