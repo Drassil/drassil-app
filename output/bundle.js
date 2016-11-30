@@ -39055,14 +39055,14 @@
 	        // removing all elements that are not suitable for other platforms
 	        if (window.Drassil.PLATFORM==="browser") {
 	            $(".device-element").hide();
+	        }
 	
-	            if (window.Drassil.PLATFORM!=="cordova") {
-	                $(".cordova-element").hide();
-	            }
+	        if (window.Drassil.PLATFORM!=="cordova") {
+	            $(".cordova-element").hide();
+	        }
 	
-	            if (window.Drassil.PLATFORM!=="electron") {
-	                $(".electron-element").hide();
-	            }
+	        if (window.Drassil.PLATFORM!=="electron") {
+	            $(".electron-element").hide();
 	        }
 	    });
 	    

@@ -1,4 +1,4 @@
-
+var appDomainUrl = appFramework.getConf("url");
 // *
 // * Non modificare i seguenti parametri...
 // *
@@ -16,4 +16,4 @@ appFramework.loadExternal({
     }
 });
 
-//# sourceURL=drassil_browser.js
+//# sourceURL=remote-main.js

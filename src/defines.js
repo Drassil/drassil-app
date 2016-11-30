@@ -23,11 +23,19 @@ Drassil.defines={
 };
 
 
+function getQueryParam(param) {
+    var result =  window.location.search.match(
+        new RegExp("(\\?|&)" + param + "(\\[\\])?=([^&]*)")
+    );
+
+    return result ? result[3] : false;
+}
+
 // dynamic base
 console.log("//"+document.location.host +location.pathname);
 document.write("<base href='//"+document.location.host + location.pathname+"' />");
 
-if (window && window.cordova) {
+if ((window && window.cordova) || getQueryParam("platform") === "cordova") {
     //
     // running under cordova
     //
@@ -48,4 +56,5 @@ if (window && window.cordova) {
     Drassil.PLATFORM="browser";
 }
 
+console.log("Running on platform: "+Drassil.PLATFORM);
 
