@@ -26,7 +26,7 @@
             var settings = new Settings(electron.remote.getCurrentWindow(),$);
             var Drassil = electron.remote.getGlobal('Drassil');
             
-            settings.list.get('wowFolder.wowFolder').then(function(val) {
+            settings.list().get('wowFolder.wowFolder').then(function(val) {
                 if (val)
                     $("#wowFolder").attr("placeholder", val.toString());
             });
