@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>Drassil Launcher</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>window.$ = window.jQuery = require('./jquery.min.js');</script>
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
 	<link href="http://app.drassil.net/modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="http://app.drassil.net/src/css/style.css" rel="stylesheet" type="text/css">
-	<link href="http://app.drassil.net/src/css/newage.css" rel="stylesheet" type="text/css">
+	<link href="http://app.drassil.net/src/css/azs.css" rel="stylesheet" type="text/css">
 	<link href="http://app.drassil.net/src/css/settings.css" rel="stylesheet" type="text/css">
+    <script src="http://app.drassil.net/modules/jquery/jquery.min.js"></script>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://app.drassil.net/modules/bootstrap/js/bootstrap.min.js"></script>
@@ -18,7 +19,7 @@
         var Drassil = electron.remote.getGlobal('Drassil');
         var settings = require('electron-settings');
     </script>
-    <script src="http://app.drassil.net/modules/jquery/jquery.min.js"></script>
+    <script>if (window.module) module = window.module;</script>
   </head>
   <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
