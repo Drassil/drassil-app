@@ -8,14 +8,13 @@ function run(host,port,dev) {
         options = {
             index: "index-dev.html"
         };
-    } else {
-        // Webpack for production
-        var webpack = require("webpack")
-
-        var config = require(__dirname+"/webpack.config.js");
-        webpack(config);
     }
-    
+
+    // run webpack to keep the bundle files updated
+    var webpack = require("webpack")
+
+    var config = require(__dirname+"/webpack.config.js");
+    webpack(config);
     
     var expr = express();
     expr.use(express.static(__dirname, options)); //use static files in ROOT/public folder
