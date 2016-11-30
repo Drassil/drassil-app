@@ -20,6 +20,21 @@ app.config(['$routeProvider','$locationProvider','$ngxtProvider',function($route
 }]);
 
 app.run(function($rootScope) {
+    $rootScope.$on("$routeChangeSuccess",function() {
+        // removing all elements that are not suitable for other platforms
+        if (window.Drassil.PLATFORM==="browser") {
+            $(".device-element").hide();
+
+            if (window.Drassil.PLATFORM!=="cordova") {
+                $(".cordova-element").hide();
+            }
+
+            if (window.Drassil.PLATFORM!=="electron") {
+                $(".electron-element").hide();
+            }
+        }
+    });
+    
     /*$rootScope.$on("$routeChangeStart", function($event,$next, $previousRoute) {
         if ($previousRoute != null && $next.$$route.templateUrl != $previousRoute.loadedTemplateUrl 
                 && $next.$$route.templateUrl == "site/it/home.html") {

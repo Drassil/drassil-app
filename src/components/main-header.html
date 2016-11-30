@@ -13,14 +13,14 @@
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="index.html">Home</a></li>
                     <li><a href="/site/en/server-status.html">Players Online</a></li>
-					<li><a href="#" onclick="Drassil.settingsOpen()">Settings</a></li>
+					<li><a href="#" class="electron-element" onclick="Drassil.settingsOpen()">Settings</a></li>
 					<li><a href="#" onclick="Drassil.openAbout('drassil')">About us</a></li>
 					<li><a href="#" onclick="Drassil.openForum('drassil')">Forum</a></li>
-					<li><a href="#" onclick="Drassil.resetWoW()">Reset WoW</a></li>
+					<li><a href="#" class="electron-element" onclick="Drassil.resetWoW()">Reset WoW</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><div class="draggable"></div><li>
-					<li><a btn href="javascript:void(0)" id="min-btn" class="device-element" onclick="Drassil.appMinimize()"><span class="glyphicon glyphicon-chevron-down"></span></a></li>
+					<li><a btn href="javascript:void(0)" id="min-btn" class="electron-element" onclick="Drassil.appMinimize()"><span class="glyphicon glyphicon-chevron-down"></span></a></li>
 					<li><a btn href="javascript:void(0)" id="close-btn" class="device-element" onclick="Drassil.appClose()"><span class="glyphicon glyphicon-remove"></span></a></li>
 				</ul>
 			</div>
@@ -29,8 +29,6 @@
 </template>
 <script>
     registerComponent("drassil-header",false,function() {
-        if (window.Drassil.PLATFORM==="browser") {
-            $(".device-element").hide();
-        }
+        // after rendered
     });
 </script>
