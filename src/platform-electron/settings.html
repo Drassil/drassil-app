@@ -1,67 +1,65 @@
 <!DOCTYPE html>
 <html class>
-  <head>
-    <meta charset="UTF-8">
-    <title>Drassil Launcher</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
-	<link href="http://app.drassil.net/modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="http://app.drassil.net/src/css/style.css" rel="stylesheet" type="text/css">
-	<link href="http://app.drassil.net/src/css/azs.css" rel="stylesheet" type="text/css">
-	<link href="http://app.drassil.net/src/css/settings.css" rel="stylesheet" type="text/css">
-    <script src="http://app.drassil.net/modules/jquery/jquery.min.js"></script>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="http://app.drassil.net/modules/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-        var electron = require("electron");
-        var Drassil = electron.remote.getGlobal('Drassil');
-    </script>
-    <script src="http://app.drassil.net/src/platform-electron/settings.js"></script>
-  </head>
-  <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
-			  <a class="navbar-brand" href="#">Drassil Launcher</a>
-			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav">
-					<!--<li class="active"><a href="#">Home</a></li>-->
-					<li class="active"><a href="#" onclick="settingsOpen()">Settings</a></li>
-					<li><a href="#" onclick="Drassil.openAbout('drassil')">About us</a></li>
-					<li><a href="#" onclick="Drassil.openForum('drassil')">Forum</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><div class="draggable"></div><li>
-					<li><a btn href="javascript:void(0)" id="min-btn" onclick="appMinimize()"><span class="glyphicon glyphicon-chevron-down"></span></a></li>
-					<li><a btn href="javascript:void(0)" id="close-btn" onclick="appClose()"><span class="glyphicon glyphicon-remove"></span></a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="selectWoWFolder()"><div id="selectFolderButton">SELECT FOLDER</div></a></div>
-			<div class="col-lg-3 col-md-4 col-sm-5 col-xs-6"><input id="wowFolder" type="text" name="text" placeholder="Select WoW folder" readonly="readonly" /></div>
-		</div>
-		<div class="row">
-			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="saveSettings()"><div id="selectFolderButton">SAVE</div></a></div>
-			<div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-restart">Launcher must be restarted manually after setting the folder</span></div>
-			<div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-version">Launcher version:</span></div>
-			<div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-dev">Designed by Jestus</span></div>
-			<!--<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><input id="ClearCacheCheckbox" type="checkbox" name="ClearCache"><label for ClearCacheCheckbox>Clear Cache</label></div>-->
-		</div>
-	</div>
-  </body>
-  <script>
-    getLauncherVer();
-  </script>
-  <script>if (window.module) module = window.module;</script>
+    <head>
+        <meta charset="UTF-8">
+        <title>Drassil Launcher</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }</script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+        <link href="http://app.drassil.net/modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://app.drassil.net/src/css/style.css" rel="stylesheet" type="text/css">
+        <link href="http://app.drassil.net/src/css/azs.css" rel="stylesheet" type="text/css">
+        <link href="http://app.drassil.net/src/css/settings.css" rel="stylesheet" type="text/css">
+        <script src="http://app.drassil.net/modules/jquery/jquery.min.js"></script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="http://app.drassil.net/modules/bootstrap/js/bootstrap.min.js"></script>
+        <script>
+            var electron = window.nodeRequire('electron');
+            var Settings = electron.remote.require('./drassil-app/settings.js');
+            var Drassil = electron.remote.getGlobal('Drassil');
+        </script>
+        <script src="http://app.drassil.net/src/platform-electron/settings.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Drassil Launcher</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><div class="draggable"></div><li>
+                        <li><a href="javascript:void(0)" id="close-btn" onclick="Settings.appClose()"><span class="glyphicon glyphicon-remove"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="Settings.selectWoWFolder()"><div id="selectFolderButton">SELECT FOLDER</div></a></div>
+                <div class="col-lg-3 col-md-4 col-sm-5 col-xs-6"><input id="wowFolder" type="text" name="text" placeholder="Select WoW folder" readonly="readonly" /></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="Settings.saveSettings()"><div id="selectFolderButton">SAVE</div></a></div>
+                <div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-restart">Launcher must be restarted manually after setting the folder</span></div>
+                <div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-version">Launcher version:</span></div>
+                <div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-dev">Designed by Jestus</span></div>
+                <!--<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><input id="ClearCacheCheckbox" type="checkbox" name="ClearCache"><label for ClearCacheCheckbox>Clear Cache</label></div>-->
+            </div>
+        </div>
+        <script>
+            Settings.getLauncherVer();
+        </script>
+        <script>if (window.module)
+          module = window.module;</script>
+    </body>
 </html>
