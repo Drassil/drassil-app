@@ -6,8 +6,9 @@
     "start-dev": "node run.js dev"
   },
   "devDependencies": {
-    "webpack": "^1.13.3",
     "browser-sync": "^2.18.2",
-    "script-loader": "*"
+    "express": "^4.14.0",
+    "script-loader": "*",
+    "webpack": "^1.13.3"
   }
 }

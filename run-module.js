@@ -2,6 +2,7 @@ function run(host,port,dev) {
     var options = {};
 
     if (dev) {
+        // DEV MODE DOESN'T USE THE BUNDLED VERSION
         var fs = require("fs");
         var express = require("express");
         options = {
@@ -12,10 +13,14 @@ function run(host,port,dev) {
         expr.use(express.static(__dirname, options)); //use static files in ROOT/public folder
 
         expr.get("/", function (request, response) { //root dir
+            
         });
 
+        console.log("Your webserver is listening on  "+host+":"+port);
         expr.listen(port, host);
     } else {
+        // Webpack for production
+
         var webpack = require("webpack")
         var browersync = require("browser-sync")
 
