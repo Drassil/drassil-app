@@ -39030,7 +39030,7 @@
 /***/ function(module, exports) {
 
 	var app=angular.module("DrassilApp",["ngRoute",'angular-loading-bar','angularVideoBg',"AngularXT"]);
-	alert("ok");
+	
 	app.config(['$routeProvider','$locationProvider','$ngxtProvider',function($routeProvider,$locationProvider,$ngxtProvider){
 	    var ngxt=$ngxtProvider;
 	    
