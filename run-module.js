@@ -1,4 +1,4 @@
-function run(host,port,dev) {
+function run(host, port, dev) {
     var options = {};
     var fs = require("fs");
     var express = require("express");
@@ -11,20 +11,22 @@ function run(host,port,dev) {
     }
 
     // run webpack to keep the bundle files updated
-    var webpack = require("webpack")
+    var webpack = require("webpack");
 
-    var config = require(__dirname+"/webpack.config.js");
-    webpack(config);
-    
-    var expr = express();
-    expr.use(express.static(__dirname, options)); //use static files in ROOT/public folder
+    var config = require(__dirname + "/webpack.config.js");
+    var compiler = webpack(config);
 
-    expr.get("/", function (request, response) { //root dir
+    compiler.watch({},function(err,stats){
+        var expr = express();
+        expr.use(express.static(__dirname, options)); //use static files in ROOT/public folder
 
+        expr.get("/", function (request, response) { //root dir
+
+        });
+
+        console.log("Your webserver is listening on  " + host + ":" + port);
+        expr.listen(port, host);
     });
-
-    console.log("Your webserver is listening on  "+host+":"+port);
-    expr.listen(port, host);
 }
 
-module.exports=run;
+module.exports = run;
