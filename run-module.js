@@ -1,4 +1,4 @@
-function run(host, port, dev) {
+function run(host, port, dev, callback) {
     var options = {};
     var fs = require("fs");
     var express = require("express");
@@ -21,11 +21,10 @@ function run(host, port, dev) {
         expr.use(express.static(__dirname, options)); //use static files in ROOT/public folder
 
         expr.get("/", function (request, response) { //root dir
-
         });
 
         console.log("Your webserver is listening on  " + host + ":" + port);
-        expr.listen(port, host);
+        expr.listen(port, host, callback);
     });
 }
 
