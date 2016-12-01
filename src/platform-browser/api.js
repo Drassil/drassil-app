@@ -8,22 +8,25 @@ Drassil.appMinimize = function() {
 
 };
 
+function openExternal(url) {
+    // on browser _blank is enough to open a new tab
+    var win = window.open(url, '_blank'); 
+    win.focus();
+}
+
 Drassil.openSite = function(realm) {
     var siteUrl = Drassil.defines[realm].website;
-    var win = window.open(siteUrl, '_blank');
-    win.focus();
+    openExternal(siteUrl);
 };
 
 Drassil.openForum = function(realm) {
     var forumUrl = Drassil.defines[realm].forum;
-    var win = window.open(forumUrl, '_blank');
-    win.focus();
+    openExternal(forumUrl);
 };
 
 Drassil.openAbout = function(realm) {
     var aboutUrl = Drassil.defines[realm].about;
-    var win = window.open(aboutUrl, '_blank');
-    win.focus();
+    openExternal(aboutUrl);
 };
 
 Drassil.settingsOpen = function(Drassil) {

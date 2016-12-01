@@ -15,7 +15,8 @@ eventer(messageEvent, function (e) {
 }, false);
 
 function openExternal(url) {
-    var win = window.open(url, '_system');
+    // use _system to open external links using in-app-browser cordova plugin
+    var win = window.open(url, '_system'); 
     win.focus();
 }
 
