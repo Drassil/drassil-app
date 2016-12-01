@@ -12,15 +12,18 @@ Drassil.appMinimize = function() {
 };
 
 Drassil.openSite = function(realm) {
-    DrassilEct.api.openSite(realm);
+    var siteUrl = Drassil.defines[realm].website;
+    DrassilEct.api.openExternal(siteUrl);
 };
 
 Drassil.openForum = function(realm) {
-    DrassilEct.api.openForum(realm);
+    var forumUrl = Drassil.defines[realm].forum;
+    DrassilEct.api.openExternal(forumUrl);
 };
 
 Drassil.openAbout = function(realm) {
-    DrassilEct.api.openAbout(realm);
+    var aboutUrl = Drassil.defines[realm].about;
+    DrassilEct.api.openExternal(aboutUrl);
 };
 
 Drassil.settingsOpen = function(Drassil) {
@@ -45,8 +48,4 @@ Drassil.clearCache = function() {
 
 Drassil.setRealm = function(realm) {
     DrassilEct.api.setRealm(realm);
-};
-
-Drassil.getNews = function() {
-    DrassilEct.api.getNews();
 };

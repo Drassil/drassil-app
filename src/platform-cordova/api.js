@@ -23,11 +23,13 @@ Drassil.appMinimize = function() {
 };
 
 Drassil.openSite = function(realm) {
-
+    
 };
 
 Drassil.openForum = function(realm) {
-
+    var forumUrl = Drassil.defines[Drassil.realm].forum;
+    var win = window.open(forumUrl, '_blank');
+    win.focus();
 };
 
 Drassil.openAbout = function(realm) {
@@ -57,14 +59,3 @@ Drassil.clearCache = function() {
 Drassil.setRealm = function(realm) {
 
 };
-
-Drassil.getNews = function() {
-
-};
-
-
-								$('.upload_image_cordova').click(function(){
-									parent.postMessage("camera", "*");
-								});
-
-	
