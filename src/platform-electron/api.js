@@ -66,21 +66,21 @@ Drassil.setRealm = function(realm) {
 
 Drassil.prepareRealm = function() {
     
-    var patchDownloader=require("./drassil-app/patchDownloader.js");
-    
-    if (Drassil.realm === "newage")
-    {
-        urlJSON = "http://api.wownewage.com/patches";
-    } else if (Drassil.realm === "azerothshard")
-    {
-        urlJSON = "http://ardb.api.azerothshard.org/index.php/patches";
-    } else
-    {
-        urlJSON = null;
-    }
-    if (urlJSON) {
-        $.getJSON(urlJSON, function (data) {
-            patchDownloader.parsePatch(data);
-        });
-    }
+    require(['./drassil-app/patchDownloader.js'], function(){
+        if (Drassil.realm === "newage")
+        {
+            urlJSON = "http://api.wownewage.com/patches";
+        } else if (Drassil.realm === "azerothshard")
+        {
+            urlJSON = "http://ardb.api.azerothshard.org/index.php/patches";
+        } else
+        {
+            urlJSON = null;
+        }
+        if (urlJSON) {
+            $.getJSON(urlJSON, function (data) {
+                patchDownloader.parsePatch(data);
+            });
+        }
+    }); 
 };
