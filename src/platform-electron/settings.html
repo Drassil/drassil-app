@@ -25,7 +25,6 @@
             var Settings = electron.remote.require('./drassil-app/settings.js');
             var settings = new Settings(electron.remote.getCurrentWindow(),$);
             var Drassil = electron.remote.getGlobal('Drassil');
-            var wowFolder;
             
             settings.list().get('wowFolder.wowFolder').then(function(val) {
                 if (val)
@@ -35,8 +34,7 @@
             function selectWoWFolder() {
                 var wowFolder=settings.selectWoWFolder();
                 $("#wowFolder").attr("placeholder", wowFolder[0].toString());
-                wowFolder = wowFolder[0];
-                console.log(wowFolder);
+                window.wowFolder = wowFolder[0];
             };
         </script>
     </head>
