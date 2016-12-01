@@ -34,7 +34,8 @@
             function selectWoWFolder() {
                 var wowFolder=settings.selectWoWFolder();
                 $("#wowFolder").attr("placeholder", wowFolder[0].toString());
-            }
+                window.wowFolder = wowFolder[0];
+            };
         </script>
     </head>
     <body>
@@ -62,7 +63,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-5 col-xs-6"><input id="wowFolder" type="text" name="text" placeholder="Seleziona cartella WoW" readonly="readonly" /></div>
             </div>
             <div class="row">
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="settings.saveSettings(wowFolder[0])"><div id="selectFolderButton">SALVA</div></a></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="settings.saveSettings(wowFolder)"><div id="selectFolderButton">SALVA</div></a></div>
                 <div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-restart">IL launcher deve essere riavviato manualmente dopo aver impostato la cartella</span></div>
                 <div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-version">Launcher Version:</span></div>
                 <div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-dev">Designed by Jestus</span></div>

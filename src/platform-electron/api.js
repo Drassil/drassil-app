@@ -39,7 +39,21 @@ Drassil.launchWoW = function(realm) {
 };
 
 Drassil.resetWoW = function() {
-    DrassilEct.api.resetWoW();
+    if (Drassil.realm === "newage")
+    {
+        urlJSON = "http://api.wownewage.com/patches";
+    } else if (Drassil.realm === "azerothshard")
+    {
+        urlJSON = "http://ardb.api.azerothshard.org/index.php/patches";
+    } else
+    {
+        urlJSON = null;
+    }
+    if (urlJSON) {
+        $.getJSON(urlJSON, function (data) {
+            DrassilEct.api.resetWoW(data);
+        });
+    }
 };
 
 Drassil.clearCache = function() {
@@ -48,4 +62,25 @@ Drassil.clearCache = function() {
 
 Drassil.setRealm = function(realm) {
     DrassilEct.api.setRealm(realm);
+};
+
+Drassil.prepareRealm = function() {
+    
+    var patchDownloader=require("./drassil-app/patchDownloader.js");
+    
+    if (Drassil.realm === "newage")
+    {
+        urlJSON = "http://api.wownewage.com/patches";
+    } else if (Drassil.realm === "azerothshard")
+    {
+        urlJSON = "http://ardb.api.azerothshard.org/index.php/patches";
+    } else
+    {
+        urlJSON = null;
+    }
+    if (urlJSON) {
+        $.getJSON(urlJSON, function (data) {
+            patchDownloader.parsePatch(data);
+        });
+    }
 };

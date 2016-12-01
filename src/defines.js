@@ -12,7 +12,7 @@ Drassil.defines={
         "forum" : "http://community.wownewage.com",
         "about" : "http://wownewage.com/about",
         "settings" : "src/platform-electron/settings.html",
-        "news_json" : "http://developer.wownewage.com/index.php/articles/?&limit=6&by=id&order=desc",
+        "news_json" : "http://api.wownewage.com/articles/?&limit=6&by=id&order=desc",
     },
     "drassil" : {
         "website" : "http://warcraft.drassil.net",

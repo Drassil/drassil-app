@@ -66,3 +66,7 @@ Drassil.clearCache = function() {
 Drassil.setRealm = function(realm) {
 
 };
+
+Drassil.prepareRealm = function () {
+
+};
