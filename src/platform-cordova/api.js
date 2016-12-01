@@ -14,6 +14,11 @@ eventer(messageEvent, function (e) {
     }
 }, false);
 
+function openExternal(url) {
+    var win = window.open(url, '_system');
+    win.focus();
+}
+
 Drassil.appClose = function() {
     parent.postMessage("appClose", "*");
 };
@@ -23,17 +28,18 @@ Drassil.appMinimize = function() {
 };
 
 Drassil.openSite = function(realm) {
-    
+    var siteUrl = Drassil.defines[realm].website;
+    openExternal(siteUrl);
 };
 
 Drassil.openForum = function(realm) {
-    var forumUrl = Drassil.defines[Drassil.realm].forum;
-    var win = window.open(forumUrl, '_blank');
-    win.focus();
+    var forumUrl = Drassil.defines[realm].forum;
+    openExternal(forumUrl);
 };
 
 Drassil.openAbout = function(realm) {
-
+    var aboutUrl = Drassil.defines[realm].about;
+    openExternal(aboutUrl);
 };
 
 Drassil.settingsOpen = function(Drassil) {
