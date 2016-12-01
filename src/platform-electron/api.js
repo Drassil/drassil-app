@@ -64,7 +64,6 @@ Drassil.setRealm = function(realm) {
 };
 
 Drassil.prepareRealm = function() {
-    console.log(Drassil);
     var settings = electron.remote.require('electron-settings');
     var patchDownloader = electron.remote.require("./drassil-app/patchDownload.js");
     var patchDownload = new patchDownloader(electron.remote.getCurrentWindow(), settings, $);
