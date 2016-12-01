@@ -82,7 +82,7 @@ Drassil.prepareRealm = function() {
       
     if (urlJSON) {
         $.getJSON(urlJSON, function (data) {
-            patchDownload.initializeDownload(data, Drassil);
+            patchDownload.initializeDownload(data);
         });
     }
 };
