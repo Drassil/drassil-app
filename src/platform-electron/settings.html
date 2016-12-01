@@ -25,18 +25,18 @@
             var Settings = electron.remote.require('./drassil-app/settings.js');
             var settings = new Settings(electron.remote.getCurrentWindow(),$);
             var Drassil = electron.remote.getGlobal('Drassil');
+            var wowFolder;
             
             settings.list().get('wowFolder.wowFolder').then(function(val) {
                 if (val)
                     $("#wowFolder").attr("placeholder", val.toString());
             });
             
-            var wowFolder = (function selectWoWFolder() {
+            function selectWoWFolder() {
                 var wowFolder=settings.selectWoWFolder();
                 $("#wowFolder").attr("placeholder", wowFolder[0].toString());
-                
-                return wowFolder[0];
-            })();
+                wowFolder = wowFolder[0];
+            };
         </script>
     </head>
     <body>
@@ -64,7 +64,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-5 col-xs-6"><input id="wowFolder" type="text" name="text" placeholder="Select WoW folder" readonly="readonly" /></div>
             </div>
             <div class="row">
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="settings.saveSettings(wowFolder)"><div id="selectFolderButton">SAVE</div></a></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="settings.saveSettings()"><div id="selectFolderButton">SAVE</div></a></div>
                 <div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-restart">Launcher must be restarted manually after setting the folder</span></div>
                 <div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-version">Launcher version:</span></div>
                 <div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-dev">Designed by Jestus</span></div>
