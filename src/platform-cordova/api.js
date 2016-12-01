@@ -14,6 +14,12 @@ eventer(messageEvent, function (e) {
     }
 }, false);
 
+function openExternal(url) {
+    // use _system to open external links using in-app-browser cordova plugin
+    var win = window.open(url, '_system'); 
+    win.focus();
+}
+
 Drassil.appClose = function() {
     parent.postMessage("appClose", "*");
 };
@@ -23,15 +29,18 @@ Drassil.appMinimize = function() {
 };
 
 Drassil.openSite = function(realm) {
-
+    var siteUrl = Drassil.defines[realm].website;
+    openExternal(siteUrl);
 };
 
 Drassil.openForum = function(realm) {
-
+    var forumUrl = Drassil.defines[realm].forum;
+    openExternal(forumUrl);
 };
 
 Drassil.openAbout = function(realm) {
-
+    var aboutUrl = Drassil.defines[realm].about;
+    openExternal(aboutUrl);
 };
 
 Drassil.settingsOpen = function(Drassil) {
@@ -58,13 +67,6 @@ Drassil.setRealm = function(realm) {
 
 };
 
-Drassil.getNews = function() {
+Drassil.prepareRealm = function () {
 
 };
-
-
-								$('.upload_image_cordova').click(function(){
-									parent.postMessage("camera", "*");
-								});
-
-	

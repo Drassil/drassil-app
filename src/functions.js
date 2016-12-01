@@ -6,7 +6,6 @@ Drassil.parseNews = function(url) {
       var title = [];
       var content = [];
       $.each( data, function( key, val ) {
-            //console.log("key: "+key+" val:"+val['headline'])
         title.push(val['headline'].substring(12, val['headline'].length-2));
             content.push(val['content']);
       });

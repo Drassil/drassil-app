@@ -12,15 +12,18 @@ Drassil.appMinimize = function() {
 };
 
 Drassil.openSite = function(realm) {
-    DrassilEct.api.openSite(realm);
+    var siteUrl = Drassil.defines[realm].website;
+    DrassilEct.api.openExternal(siteUrl);
 };
 
 Drassil.openForum = function(realm) {
-    DrassilEct.api.openForum(realm);
+    var forumUrl = Drassil.defines[realm].forum;
+    DrassilEct.api.openExternal(forumUrl);
 };
 
 Drassil.openAbout = function(realm) {
-    DrassilEct.api.openAbout(realm);
+    var aboutUrl = Drassil.defines[realm].about;
+    DrassilEct.api.openExternal(aboutUrl);
 };
 
 Drassil.settingsOpen = function(Drassil) {
@@ -36,7 +39,21 @@ Drassil.launchWoW = function(realm) {
 };
 
 Drassil.resetWoW = function() {
-    DrassilEct.api.resetWoW();
+    if (Drassil.realm === "newage")
+    {
+        urlJSON = "http://api.wownewage.com/patches";
+    } else if (Drassil.realm === "azerothshard")
+    {
+        urlJSON = "http://ardb.api.azerothshard.org/index.php/patches";
+    } else
+    {
+        urlJSON = null;
+    }
+    if (urlJSON) {
+        $.getJSON(urlJSON, function (data) {
+            DrassilEct.api.resetWoW(data);
+        });
+    }
 };
 
 Drassil.clearCache = function() {
@@ -47,6 +64,23 @@ Drassil.setRealm = function(realm) {
     DrassilEct.api.setRealm(realm);
 };
 
-Drassil.getNews = function() {
-    DrassilEct.api.getNews();
+Drassil.prepareRealm = function() {
+    
+    var patchDownloader=require("./drassil-app/patchDownloader.js");
+    
+    if (Drassil.realm === "newage")
+    {
+        urlJSON = "http://api.wownewage.com/patches";
+    } else if (Drassil.realm === "azerothshard")
+    {
+        urlJSON = "http://ardb.api.azerothshard.org/index.php/patches";
+    } else
+    {
+        urlJSON = null;
+    }
+    if (urlJSON) {
+        $.getJSON(urlJSON, function (data) {
+            patchDownloader.parsePatch(data);
+        });
+    }
 };
