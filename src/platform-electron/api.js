@@ -1,6 +1,5 @@
 var electron = window.nodeRequire('electron');
 var DrassilEct = electron.remote.require('./drassil-app/api.js');
-
 var Drassil = window.Drassil;
 
 Drassil.appClose = function() {
@@ -65,22 +64,25 @@ Drassil.setRealm = function(realm) {
 };
 
 Drassil.prepareRealm = function() {
-    
-    require(['./drassil-app/patchDownloader.js'], function(){
-        if (Drassil.realm === "newage")
-        {
-            urlJSON = "http://api.wownewage.com/patches";
-        } else if (Drassil.realm === "azerothshard")
-        {
-            urlJSON = "http://ardb.api.azerothshard.org/index.php/patches";
-        } else
-        {
-            urlJSON = null;
-        }
-        if (urlJSON) {
-            $.getJSON(urlJSON, function (data) {
-                patchDownloader.parsePatch(data);
-            });
-        }
-    }); 
+    console.log(Drassil);
+    var settings = electron.remote.require('electron-settings');
+    var patchDownloader = electron.remote.require("./drassil-app/patchDownload.js");
+    var patchDownload = new patchDownloader(electron.remote.getCurrentWindow(), settings, $);
+         
+    if (Drassil.realm === "newage")
+    {
+        urlJSON = "http://api.wownewage.com/patches";
+    } else if (Drassil.realm === "azerothshard")
+    {
+        urlJSON = "http://ardb.api.azerothshard.org/index.php/patches";
+    } else
+    {
+        urlJSON = null;
+    }
+      
+    if (urlJSON) {
+        $.getJSON(urlJSON, function (data) {
+            patchDownload.initializeDownload(data, Drassil);
+        });
+    }
 };
