@@ -1,3 +1,6 @@
 [submodule "dist"]
 	path = dist
 	url = https://gitlab.com/drassil/launcher-release.git
+[submodule "modules/drassil-server-status"]
+	path = modules/drassil-server-status
+	url = https://github.com/drassil-net/module-server-status
