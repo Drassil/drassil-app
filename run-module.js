@@ -15,8 +15,8 @@ function run(host, port, dev, callback) {
 
     var config = require(__dirname + "/webpack.config.js");
     var compiler = webpack(config);
-
-    compiler.watch({},function(err,stats){
+    
+    compiler.run(function(err,stats){
         var expr = express();
         expr.use(express.static(__dirname, options)); //use static files in ROOT/public folder
 
@@ -25,6 +25,9 @@ function run(host, port, dev, callback) {
 
         console.log("Your webserver is listening on  " + host + ":" + port);
         expr.listen(port, host, callback);
+        
+        compiler.watch({},function(err,stats){
+        });
     });
 }
 
