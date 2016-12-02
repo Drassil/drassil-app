@@ -17,7 +17,7 @@ Drassil.defines={
     "drassil" : {
         "website" : "http://warcraft.drassil.net",
         "forum" : "http://forum.drassil.net",
-        "about" : "http://drassil.net/about",
+        "about" : "http://drassil.net",
         "settings" : "src/platform-electron/settings.html"
     }
 };
