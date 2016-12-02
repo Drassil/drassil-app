@@ -15,7 +15,7 @@ module.exports = {
         "modules/bower_components/angular-video-bg/angular-video-bg.min.js",
         "modules/bootstrap/js/bootstrap.min.js",
         conf_path,
-        'modules/angular-xt/plugin/index.js',
+        'modules/angular-xt/src/index.js',
         'src/functions.js',
         'src/app.js'
     ],
