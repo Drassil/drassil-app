@@ -378,8 +378,10 @@ var HwcBootstrap = (function () {
             var req=require;
             var def=define;
             require("script!hwc_js_modules_requirejs");
+            /*window.hwc.define=window.define;
+            window.hwc.require=window.require;
             require=req;
-            define=def;
+            define=def;*/
         } else {
             _loadSync(hwc_conf.paths.hwc_js_modules_requirejs+'.js');
         }

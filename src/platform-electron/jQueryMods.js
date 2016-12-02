@@ -1,4 +1,5 @@
-(function () {
+// requirejs module ( for site )
+define(function() {
     function jQueryMods() {    };
     
     jQueryMods.prototype.fadeInDownloadBar = function() {
@@ -25,7 +26,7 @@
         });
     };
     
-    jQueryMods.prototype.downloadPercentage = function()
+    jQueryMods.prototype.downloadPercentage = function(downloadedMB,name,realPercent,totalMB)
     {
         $("#dataDownload").html("Data downloaded: "+downloadedMB+ " MB / "+totalMB +" MB");
         $("#patchDownload").html("File: "+name);
@@ -34,7 +35,5 @@
         $(".progress-bar").attr("style", "width:"+realPercent+"%");
     };
 
-    
-    // export api
-    module.exports = jQueryMods;
-})();
+    return jQueryMods;
+});
