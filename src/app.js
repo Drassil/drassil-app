@@ -20,7 +20,7 @@ app.config(['$routeProvider','$locationProvider','$ngxtProvider',function($route
 }]);
 
 app.run(function($rootScope) {
-    $rootScope.$on("$routeChangeSuccess",function() {
+    $rootScope.$on("$viewContentLoaded",function() {
         // removing all elements that are not suitable for other platforms
         if (window.Drassil.PLATFORM==="browser") {
             $(".device-element").hide();
