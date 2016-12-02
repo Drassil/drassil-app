@@ -13,6 +13,7 @@ app.config(['$routeProvider','$locationProvider','$ngxtProvider',function($route
     .when("/site/it/warcraft_tales.html",      ngxt.routeComponent({templateUrl: "site/it/warcraft_tales.html", scriptUrls: deps, reloadOnSearch: false}) )
     .when("/site/en/newage.html",   ngxt.routeComponent({templateUrl: "site/en/newage.html", scriptUrls: deps, reloadOnSearch: false}) )
     .when("/site/en/server-status.html",   ngxt.routeComponent({templateUrl: "/site/en/server-status.html", scriptUrls: deps, reloadOnSearch: false}) )
+    .when("/site/en/download-apps.html",   ngxt.routeComponent({templateUrl: "site/en/download-apps.html", scriptUrls: deps, reloadOnSearch: false}) )
     .when("/site/en/home.html",   ngxt.routeComponent({templateUrl: "site/en/home.html", scriptUrls: deps, reloadOnSearch: false}) )
     .otherwise(               {redirectTo: '/site/en/home.html'});
         
@@ -32,6 +33,10 @@ app.run(function($rootScope) {
 
         if (window.Drassil.PLATFORM!=="electron") {
             $(".electron-element").hide();
+        }
+        
+        if (window.Drassil.PLATFORM!=="browser") {
+            $(".browser-element").hide();
         }
     });
     
