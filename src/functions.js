@@ -22,3 +22,5 @@ Drassil.parseNews = function(url) {
         $('.title, .content').delay(1500).fadeIn(1000);
     });
 };
+
+
