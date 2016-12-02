@@ -4,3 +4,6 @@
 [submodule "modules/drassil-server-status"]
 	path = modules/drassil-server-status
 	url = https://github.com/drassil-net/module-server-status
+[submodule "modules/drassil-arena-stats"]
+	path = modules/drassil-arena-stats
+	url = https://github.com/drassil-net/module-arena-stats

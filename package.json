@@ -1,6 +1,7 @@
 {
   "name": "drassil-app-web",
   "scripts": {
+    "postinstall" : "git submodule update --recursive --init",
     "build": "webpack --config webpack.config.js --progress --profile --colors",
     "start": "node run.js",
     "start-dev": "node run.js dev"
