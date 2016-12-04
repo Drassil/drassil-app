@@ -76,7 +76,9 @@ define([
     };
 
     Drassil.prepareRealm = function () {
+        
         var patchDownload = new PatchDownloader(electron.remote.getCurrentWindow(), new jQueryMods());
+       
 
         if (Drassil.realm === "newage")
         {
