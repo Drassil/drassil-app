@@ -18,6 +18,13 @@ define(function() {
         });
     };
 
+    jQueryMods.prototype.fadeOutPlayButton = function()
+    {
+        $(document).ready(function() {
+                $('#play-btn').fadeOut(1);
+        });
+    };
+    
     jQueryMods.prototype.fadeInPlayButton = function()
     {
         $(document).ready(function() {
