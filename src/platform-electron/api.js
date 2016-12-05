@@ -70,9 +70,15 @@ define([
     Drassil.setRealm = function (realm) {
         DrassilEct.api.setRealm(realm);
     };
+    
+    Drassil.switchRealm = function (realmAfter) {
+        DrassilEct.api.switchRealm(realmAfter, new jQueryMods());
+    };
 
     Drassil.prepareRealm = function () {
+        
         var patchDownload = new PatchDownloader(electron.remote.getCurrentWindow(), new jQueryMods());
+       
 
         if (Drassil.realm === "newage")
         {

@@ -18,6 +18,13 @@ define(function() {
         });
     };
 
+    jQueryMods.prototype.fadeOutPlayButton = function()
+    {
+        $(document).ready(function() {
+                $('#play-btn').fadeOut(1);
+        });
+    };
+    
     jQueryMods.prototype.fadeInPlayButton = function()
     {
         $(document).ready(function() {
@@ -34,6 +41,15 @@ define(function() {
         $(".progress-bar").attr("aria-valuenow", realPercent);
         $(".progress-bar").attr("style", "width:"+realPercent+"%");
     };
+    
+    jQueryMods.prototype.getJSON = function(url, callback)
+    {
+        if (url) {
+            $.getJSON(url, function (data) {
+                callback(data);
+            });
+        }
+    }
 
     return jQueryMods;
 });
