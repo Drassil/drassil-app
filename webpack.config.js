@@ -20,7 +20,7 @@ module.exports = {
         'src/app.js'
     ],
     output: {
-        path: path_prefix + '/output',
+        path: path_prefix + '/build',
         filename: 'bundle.js'
     },
     devtool: 'source-map',
