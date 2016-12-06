@@ -29,7 +29,7 @@ app.config(['$routeProvider','$locationProvider','$ngxtProvider',function($route
     )
     // old legacy url 
     .when("/site/en/newage.html",{redirectTo: '/site/en/newage'})
-    .when("/site/en/azerothshard.html",{redirectTo: '/site/en/azerothshard'})
+    .when("/site/it/azerothshard.html",{redirectTo: '/site/en/azerothshard'})
     // otherwise
     .otherwise({redirectTo: '/site/en/home/index.html'});
         

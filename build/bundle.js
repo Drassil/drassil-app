@@ -35638,7 +35638,7 @@
 /* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var require;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, __dirname) {'use strict';
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(global, __dirname) {'use strict';
 	/*
 	 * VERY FIRST DEFINES AND LEGACY
 	 * TODO: old code, re-organizing or remove
@@ -39072,7 +39072,7 @@
 	    )
 	    // old legacy url 
 	    .when("/site/en/newage.html",{redirectTo: '/site/en/newage'})
-	    .when("/site/en/azerothshard.html",{redirectTo: '/site/en/azerothshard'})
+	    .when("/site/it/azerothshard.html",{redirectTo: '/site/en/azerothshard'})
 	    // otherwise
 	    .otherwise({redirectTo: '/site/en/home/index.html'});
 	        
