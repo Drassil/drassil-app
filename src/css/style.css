@@ -8,7 +8,7 @@ html, body{
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
-	 -webkit-background-size: cover;
+	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
@@ -96,6 +96,12 @@ a, a:hover{
 	border-radius: 3px;
 	filter: brightness(70%);
 	z-index: 100;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 }
 
 .button:hover {
