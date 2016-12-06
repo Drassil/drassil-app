@@ -106,23 +106,23 @@ a, a:hover{
 
 #newage-btn{
 	background-image:url("../../data/images/tile1.png");
-	max-width: 100%;
+	max-width: 476px;
 }
 
 #azs-btn{
 	background-image:url("../../data/images/tile2.png");
-	max-width: 100%;
+	max-width: 476px;
 }
 
 #gdr-btn{
 	background-image:url("../../data/images/tile3.png");
 	filter: brightness(20%) !important;
-	max-width: 100%;
+	max-width: 476px;
 }
 
 #gdr-btn:hover{
 	filter: brightness(20%) !important;
-	max-width: 100%;
+	max-width: 476px;
 }
 
 .container{
