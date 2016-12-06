@@ -1,0 +1,31 @@
+<template id="header-newage">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">Drassil App</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="site/en/home">Home</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Server<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="/site/en/newage/server-status">Online Players</a></li>
+                                                <li><a href="/site/en/newage/arena-stats">Arena Stats</a></li>
+					</ul>
+					<li><a href="#" onclick="Drassil.openForum('newage')">Forum</a></li>
+				</ul>
+                                <header-app-btn></header-app-btn>
+			</div>
+		</div>
+	</nav>
+</template>
+<script>
+    registerComponent("header-newage",false,function() {
+        // after rendered
+    });
+</script>

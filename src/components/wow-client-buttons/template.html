@@ -1,0 +1,11 @@
+<template id="wow-client-buttons">
+    <a class="sidebar-btn electron-element" id="settings-btn" href="#" onclick="Drassil.settingsOpen()">Settings</a>
+    <a class="sidebar-btn electron-element" id="reset-btn" href="#" onclick="Drassil.resetWoW()">Reset WoW</a>
+    <a class="sidebar-btn electron-element" id="cache-btn" href="#" onclick="Drassil.clearCache()"><div><span>Pulisci Cache</span></div></a>
+    <a class="sidebar-btn hidden2 electron-element" id="play-btn" href="#" onclick="Drassil.launchWoW(Drassil.realm)"><div><span>Gioca</span></div></a>
+    <div class="collapse" id="hide"></div>
+</template>
+<script>
+    registerComponent("wow-client-buttons");
+</script>
+

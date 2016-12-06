@@ -63,6 +63,10 @@ Drassil.clearCache = function() {
 
 };
 
+Drassil.switchRealm = function (realmAfter) {
+
+};
+
 Drassil.setRealm = function(realm) {
 
 };

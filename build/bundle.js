@@ -39002,6 +39002,15 @@
 
 	var Drassil = window.Drassil;
 	
+	function print(string) {
+	    console.log(string);
+	    document.write(string);
+	}
+	
+	String.prototype.endsWith = function(suffix) {
+	    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+	};
+	
 	Drassil.parseNews = function(url) {
 	
 	    $.getJSON( url, function( data ) {
@@ -39043,36 +39052,53 @@
 	    deps.push("src/platform-"+Drassil.PLATFORM+"/api.js");
 	        
 	    $routeProvider
-	    .when("/site/it/azerothshard.html",       ngxt.routeComponent({templateUrl: "site/it/azerothshard.html", scriptUrls: deps, reloadOnSearch: false}) )
-	    .when("/site/it/warcraft_tales.html",      ngxt.routeComponent({templateUrl: "site/it/warcraft_tales.html", scriptUrls: deps, reloadOnSearch: false}) )
-	    .when("/site/en/newage.html",   ngxt.routeComponent({templateUrl: "site/en/newage.html", scriptUrls: deps, reloadOnSearch: false}) )
-	    .when("/site/en/server-status.html",   ngxt.routeComponent({templateUrl: "/site/en/server-status.html", scriptUrls: deps, reloadOnSearch: false}) )
-	    .when("/site/en/arena-stats.html",   ngxt.routeComponent({templateUrl: "/site/en/arena-stats.html", scriptUrls: deps, reloadOnSearch: false}) )
-	    .when("/site/en/download-apps.html",   ngxt.routeComponent({templateUrl: "site/en/download-apps.html", scriptUrls: deps, reloadOnSearch: false}) )
-	    .when("/site/en/home.html",   ngxt.routeComponent({templateUrl: "site/en/home.html", scriptUrls: deps, reloadOnSearch: false}) )
-	    .otherwise(               {redirectTo: '/site/en/home.html'});
+	    .when("index.html", ngxt.routeComponent({templateUrl: function(attr) {
+	            return "/site/en/home/index.html";
+	    }, scriptUrls: deps, reloadOnSearch: false}))
+	    // this rule will automatically set the path based on /site/ structure
+	    .when("/site/:page*", ngxt.routeComponent({templateUrl: function(attr) {
+	                var route=attr.page;
+	
+	                if (!route.endsWith("index.html")) {
+	                    if (!route.endsWith("/")) {
+	                        route+="/";
+	                    }
+	
+	                    route+="index.html";
+	                }
+	
+	                return "/site/"+route;
+	        }, scriptUrls: deps, reloadOnSearch: false})
+	    )
+	    // old legacy url 
+	    .when("/site/en/newage.html",{redirectTo: '/site/en/newage'})
+	    .when("/site/en/azerothshard.html",{redirectTo: '/site/en/azerothshard'})
+	    // otherwise
+	    .otherwise({redirectTo: '/site/en/home/index.html'});
 	        
 	    $locationProvider.html5Mode(true);
 	}]);
 	
-	app.run(function($rootScope) {
+	app.run(function($rootScope,$timeout) {
 	    $rootScope.$on("$viewContentLoaded",function() {
-	        // removing all elements that are not suitable for other platforms
-	        if (window.Drassil.PLATFORM==="browser") {
-	            $(".device-element").hide();
-	        }
+	        $timeout(function() { // workaround to avoid async issues
+	            // removing all elements that are not suitable for other platforms
+	            if (window.Drassil.PLATFORM!=="browser") {
+	                $(".device-element").show();
+	            }
 	
-	        if (window.Drassil.PLATFORM!=="cordova") {
-	            $(".cordova-element").hide();
-	        }
+	            if (window.Drassil.PLATFORM==="cordova") {
+	                $(".cordova-element").show();
+	            }
 	
-	        if (window.Drassil.PLATFORM!=="electron") {
-	            $(".electron-element").hide();
-	        }
-	        
-	        if (window.Drassil.PLATFORM!=="browser") {
-	            $(".browser-element").hide();
-	        }
+	            if (window.Drassil.PLATFORM==="electron") {
+	                $(".electron-element").show();
+	            }
+	
+	            if (window.Drassil.PLATFORM==="browser") {
+	                $(".browser-element").show();
+	            }
+	        },0);
 	    });
 	    
 	    /*$rootScope.$on("$routeChangeStart", function($event,$next, $previousRoute) {

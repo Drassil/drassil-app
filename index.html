@@ -12,8 +12,12 @@
         <script src="src/defines.js"></script>
         <script src="build/bundle.js"></script>
         <!-- load our web components -->
-        <link rel="import" href="src/components/main-footer.html">
-        <link rel="import" href="src/components/main-header.html">
+        <link rel="import" href="src/components/header-app-btn/template.html">
+        <link rel="import" href="src/components/footer-drassil/template.html">
+        <link rel="import" href="src/components/header-drassil/template.html">
+        <link rel="import" href="src/components/header-azs/template.html">
+        <link rel="import" href="src/components/header-newage/template.html">
+        <link rel="import" href="src/components/wow-client-buttons/template.html">
         <!-- css -->
         <link href="modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link  href="src/css/style.css" rel="stylesheet" type="text/css">
@@ -26,9 +30,10 @@
     </head>
     <body>
         <div ng-app="DrassilApp">
-            <drassil-header></drassil-header>
             <div ng-view><!-- dynamic content --></div>
-            <drassil-footer></drassil-footer>
+            <footer>
+                <footer-drassil></footer-drassil>
+            </footer>
         </div>
     </body>
 </html>

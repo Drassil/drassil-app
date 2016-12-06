@@ -53,6 +53,10 @@ Drassil.setRealm = function(realm) {
 
 };
 
+Drassil.switchRealm = function (realmAfter) {
+
+};
+
 Drassil.prepareRealm = function () {
 
 };

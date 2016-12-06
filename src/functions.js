@@ -1,5 +1,14 @@
 var Drassil = window.Drassil;
 
+function print(string) {
+    console.log(string);
+    document.write(string);
+}
+
+String.prototype.endsWith = function(suffix) {
+    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+};
+
 Drassil.parseNews = function(url) {
 
     $.getJSON( url, function( data ) {
