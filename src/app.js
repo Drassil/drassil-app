@@ -12,6 +12,10 @@ app.config(['$routeProvider','$locationProvider','$ngxtProvider',function($route
     .when("index.html", ngxt.routeComponent({templateUrl: function(attr) {
             return "/site/en/home/index.html";
     }, scriptUrls: deps, reloadOnSearch: false}))
+    // old legacy url 
+    .when("/site/en/home.html",{redirectTo: '/site/en/home'})
+    .when("/site/en/newage.html",{redirectTo: '/site/en/newage'})
+    .when("/site/it/azerothshard.html",{redirectTo: '/site/en/azerothshard'})
     // this rule will automatically set the path based on /site/ structure
     .when("/site/:page*", ngxt.routeComponent({templateUrl: function(attr) {
                 var route=attr.page;
@@ -27,10 +31,6 @@ app.config(['$routeProvider','$locationProvider','$ngxtProvider',function($route
                 return "/site/"+route;
         }, scriptUrls: deps, reloadOnSearch: false})
     )
-    // old legacy url 
-    .when("/site/en/home.html",{redirectTo: '/site/en/home'})
-    .when("/site/en/newage.html",{redirectTo: '/site/en/newage'})
-    .when("/site/it/azerothshard.html",{redirectTo: '/site/en/azerothshard'})
     // otherwise
     .otherwise({redirectTo: '/site/en/home'});
         
