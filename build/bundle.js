@@ -39071,10 +39071,11 @@
 	        }, scriptUrls: deps, reloadOnSearch: false})
 	    )
 	    // old legacy url 
+	    .when("/site/en/home.html",{redirectTo: '/site/en/home'})
 	    .when("/site/en/newage.html",{redirectTo: '/site/en/newage'})
 	    .when("/site/it/azerothshard.html",{redirectTo: '/site/en/azerothshard'})
 	    // otherwise
-	    .otherwise({redirectTo: '/site/en/home/index.html'});
+	    .otherwise({redirectTo: '/site/en/home'});
 	        
 	    $locationProvider.html5Mode(true);
 	}]);
