@@ -137,5 +137,5 @@ footer {
 .device-element,
 .electron-element,
 .cordova-element {
-    display: none;
+    display: none !important;
 }
