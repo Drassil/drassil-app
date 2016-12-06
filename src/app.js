@@ -42,19 +42,19 @@ app.run(function($rootScope,$timeout) {
         $timeout(function() { // workaround to avoid async issues
             // removing all elements that are not suitable for other platforms
             if (window.Drassil.PLATFORM!=="browser") {
-                $(".device-element").show();
+                $(".device-element").removeClass("device-element");
             }
 
             if (window.Drassil.PLATFORM==="cordova") {
-                $(".cordova-element").show();
+                $(".cordova-element").removeClass("cordova-element");
             }
 
             if (window.Drassil.PLATFORM==="electron") {
-                $(".electron-element").show();
+                $(".electron-element").removeClass("electron-element");
             }
 
             if (window.Drassil.PLATFORM==="browser") {
-                $(".browser-element").show();
+                $(".browser-element").removeClass("browser-element");
             }
         },0);
     });
