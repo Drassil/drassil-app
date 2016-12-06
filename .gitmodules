@@ -7,3 +7,6 @@
 [submodule "modules/drassil-arena-stats"]
 	path = modules/drassil-arena-stats
 	url = https://github.com/drassil-net/module-arena-stats
+[submodule "modules/azs-player-stats"]
+	path = modules/azs-player-stats
+	url = https://github.com/AzerothShard/module-player-stats.git
