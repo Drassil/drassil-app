@@ -1,7 +1,7 @@
 var Drassil = window.Drassil;
 
 Drassil.appClose = function() {
-    parent.postMessage("appClose", "*");
+
 };
 
 Drassil.appMinimize = function() {

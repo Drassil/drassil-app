@@ -17,9 +17,14 @@ var origUrl = appDomainUrl; //+ appParams;
 // * Note: this method is async
 // *
 appFramework.setMsgListener(function (e) {
-    switch(e.data) {
+    var d = JSON.parse(e.data);
+    
+    switch(d.name) {
         case "appClose":
             navigator.app.exitApp();
+        break;
+        case "openExternal":
+            navigator.app.loadUrl(d.data.url, { openExternal:true });
         break;
     }
 });

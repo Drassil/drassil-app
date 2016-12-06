@@ -6,22 +6,33 @@ var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
 
 // Listen to message from parent window
 eventer(messageEvent, function (e) {
-    switch (e.data.msg) {
+    var d = JSON.parse(e.data);
+    
+    switch (d.name) {
         case "something":
             // this is just an example for data comunication
-            var data = e.data.data;
+            var data = d.data;
         break;
     }
 }, false);
 
+// 
+function pgCall(fn_name,fn_data) {
+    var pass_data = {name: fn_name, data : fn_data};
+
+    parent.postMessage(JSON.stringify(pass_data), "*");
+} 
+
+
 function openExternal(url) {
     // use _system to open external links using in-app-browser cordova plugin
-    var win = window.open(url, '_system'); 
-    win.focus();
+    //var win = window.open(url, '_system'); 
+    //win.focus();
+    pgCall("openExternal",{url: url});
 }
 
 Drassil.appClose = function() {
-    parent.postMessage("appClose", "*");
+    pgCall("appClose");
 };
 
 Drassil.appMinimize = function() {
