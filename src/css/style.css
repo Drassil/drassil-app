@@ -89,7 +89,7 @@ a, a:hover{
 }
 .button {
 	width: 100%;
-	max-width:100%;
+	max-width:476px;
 	height:246px;
 	margin: 0 auto;
     box-shadow: 1px 1px 10px #000000;
@@ -106,23 +106,20 @@ a, a:hover{
 
 #newage-btn{
 	background-image:url("../../data/images/tile1.png");
-	max-width: 476px;
 }
 
 #azs-btn{
 	background-image:url("../../data/images/tile2.png");
-	max-width: 476px;
 }
 
 #gdr-btn{
 	background-image:url("../../data/images/tile3.png");
 	filter: brightness(20%) !important;
-	max-width: 476px;
+
 }
 
 #gdr-btn:hover{
 	filter: brightness(20%) !important;
-	max-width: 476px;
 }
 
 .container{
