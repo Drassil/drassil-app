@@ -108,15 +108,15 @@ a, a:hover{
 }
 
 #newage-btn{
-	background-image:url("../../data/images/tile1.png");
+	image:url("../../data/images/tile1.png");
 }
 
 #azs-btn{
-	background-image:url("../../data/images/tile2.png");
+	image:url("../../data/images/tile2.png");
 }
 
 #gdr-btn{
-	background-image:url("../../data/images/tile3.png");
+	image:url("../../data/images/tile3.png");
 	filter: brightness(20%) !important;
 
 }
