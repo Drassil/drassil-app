@@ -14,9 +14,14 @@ Drassil.parseNews = function(url) {
     $.getJSON( url, function( data ) {
       var title = [];
       var content = [];
+      var newsLink = [];
       $.each( data, function( key, val ) {
-        title.push(val['headline'].substring(12, val['headline'].length-2));
-            content.push(val['content']);
+        console.log(val['title']['rendered']);
+        console.log(val['excerpt']['rendered']);
+        console.log(val['link']);
+        title.push(val['title']['rendered']);
+        content.push(val['excerpt']['rendered']);
+        newsLink.push(val['link']);
       });
 
             for (var i = 0; i < title.length; i++) {
