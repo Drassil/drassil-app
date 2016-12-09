@@ -21,7 +21,7 @@ define([
     Drassil.openOtherSite = function(url)
     {
         DrassilEct.api.openExternal(url);
-    }
+    };
     
     Drassil.openSite = function (realm) {
         var siteUrl = Drassil.defines[realm].website;

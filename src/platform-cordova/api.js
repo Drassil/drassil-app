@@ -39,6 +39,11 @@ Drassil.appMinimize = function() {
 
 };
 
+Drassil.openOtherSite = function(url)
+{
+    openExternal(url);
+};
+
 Drassil.openSite = function(realm) {
     var siteUrl = Drassil.defines[realm].website;
     openExternal(siteUrl);
