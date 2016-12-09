@@ -1,6 +1,7 @@
 .app-btn {
     border-radius: 15px;
     width: 280px;
+    cursor: pointer;
 }
 
 .row{
