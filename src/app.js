@@ -37,7 +37,9 @@ app.config(['$routeProvider','$locationProvider','$ngxtProvider',function($route
     $locationProvider.html5Mode(true);
 }]);
 
-app.run(function($rootScope,$timeout) {
+app.run(function($rootScope,$timeout,$location) {
+    $rootScope.location = $location;
+    
     $rootScope.$on("$viewContentLoaded",function() {
         $timeout(function() { // workaround to avoid async issues
             // removing all elements that are not suitable for other platforms
