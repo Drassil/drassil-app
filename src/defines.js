@@ -5,14 +5,15 @@ Drassil.defines={
         "website" : "https://azerothshard.org",
         "forum" : "https://azerothshard.org/forums/",
         "about" : "https://azerothshard.org/about",
-        "settings" : "src/platform-electron/impostazioni.html"
+        "settings" : "src/platform-electron/impostazioni.html",
+        "news_json" : "https://azerothshard.org/wp-json/wp/v2/posts"
     },
     "newage" : {
         "website" : "http://wownewage.com",
         "forum" : "https://community.wownewage.com",
         "about" : "https://wownewage.com/about",
         "settings" : "src/platform-electron/settings.html",
-        "news_json" : "https://wownewage.com/wp-json/wp/v2/posts",
+        "news_json" : "https://wownewage.com/wp-json/wp/v2/posts"
     },
     "drassil" : {
         "website" : "http://warcraft.drassil.net",
