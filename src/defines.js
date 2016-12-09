@@ -9,10 +9,10 @@ Drassil.defines={
     },
     "newage" : {
         "website" : "http://wownewage.com",
-        "forum" : "http://community.wownewage.com",
-        "about" : "http://wownewage.com/about",
+        "forum" : "https://community.wownewage.com",
+        "about" : "https://wownewage.com/about",
         "settings" : "src/platform-electron/settings.html",
-        "news_json" : "http://api.wownewage.com/articles/?&limit=6&by=id&order=desc",
+        "news_json" : "https://wownewage.com/wp-json/wp/v2/posts",
     },
     "drassil" : {
         "website" : "http://warcraft.drassil.net",
