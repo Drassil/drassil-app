@@ -6,14 +6,14 @@ Drassil.defines={
         "forum" : "https://azerothshard.org/forums/",
         "about" : "https://azerothshard.org/about",
         "settings" : "src/platform-electron/impostazioni.html",
-        "news_json" : "https://azerothshard.org/wp-json/wp/v2/posts"
+        "news_json" : "https://azerothshard.org/wp-json/wp/v2/posts?per_page=6"
     },
     "newage" : {
         "website" : "http://wownewage.com",
         "forum" : "https://community.wownewage.com",
         "about" : "https://wownewage.com/about",
         "settings" : "src/platform-electron/settings.html",
-        "news_json" : "https://wownewage.com/wp-json/wp/v2/posts"
+        "news_json" : "https://wownewage.com/wp-json/wp/v2/posts?per_page=6"
     },
     "drassil" : {
         "website" : "http://warcraft.drassil.net",
@@ -46,7 +46,7 @@ if ((window && window.cordova) || getQueryParam("platform") === "cordova") {
     // running under electron
     //
     Drassil.PLATFORM="electron";
-    
+
     // avoid conflicts with requirejs/webpack
     window.nodeRequire = require;
     delete window.require;
@@ -58,4 +58,3 @@ if ((window && window.cordova) || getQueryParam("platform") === "cordova") {
 }
 
 console.log("Running on platform: "+Drassil.PLATFORM);
-
