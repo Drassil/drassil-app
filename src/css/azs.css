@@ -1,5 +1,5 @@
-::-webkit-scrollbar { 
-    display: none; 
+::-webkit-scrollbar {
+    display: none;
 }
 
 html, body{
@@ -15,7 +15,7 @@ html, body{
 	height:100%;
 }
 
-#azs-logo{
+#newage-logo{
 	background-image:url("../../data/images/azshard_logo.png");
 	width:600px;
 	height:136px;
