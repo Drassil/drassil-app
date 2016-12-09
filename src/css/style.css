@@ -52,8 +52,8 @@ a, a:hover{
 .navbar{
 	border-radius: 0px;
 	border:none;
-	background-color: rgba(39, 111, 172, 0.95);
-	border-color: rgba(39, 111, 172, 0.95);
+	background-color: rgba(39, 111, 172, 0.75);
+	border-color: rgba(39, 111, 172, 0.75);
 	color: #ffffff;
 	z-index:1;
 }
@@ -159,5 +159,10 @@ footer {
 @media (max-width: 767px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
         color: #FFFFFF;
+    }
+
+    .navbar-nav {
+        background-color: rgba(39, 111, 172, 0.95);
+        border-color: rgba(39, 111, 172, 0.95);
     }
 }
