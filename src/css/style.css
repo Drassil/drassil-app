@@ -13,10 +13,12 @@ html, body{
     -o-background-size: cover;
     background-size: cover;
 	height:100%;
+	overflow:hidden;
 }
 
 body {
     margin-bottom: 30px;
+
 }
 
 html.loading {
@@ -60,11 +62,11 @@ a, a:hover{
 }
 
 .navbar-inverse .navbar-brand {
-	color:white;	
+	color:white;
 }
 
 .navbar-inverse .navbar-brand:hover {
-	color:orange;	
+	color:orange;
 }
 
 .navbar-inverse .navbar-nav>li>a {
@@ -98,7 +100,7 @@ a, a:hover{
 	border-radius: 3px;
 	filter: brightness(70%);
 	z-index: 100;
-	
+
 }
 
 img {
@@ -151,4 +153,3 @@ footer {
 .cordova-element {
     display: none !important;
 }
-

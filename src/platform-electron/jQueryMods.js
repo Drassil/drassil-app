@@ -5,7 +5,6 @@ define(function() {
     jQueryMods.prototype.fadeInDownloadBar = function() {
         $(document).ready(function() {
                 $('.download').removeClass('hidden');
-                $('#play-btn').removeClass('hidden');
                 $('.download').delay(1500).fadeIn(1000);
         });
     };
@@ -14,7 +13,6 @@ define(function() {
     {
         $(document).ready(function() {
                 $('.download').delay(1500).fadeOut(1000);
-                $('#play-btn').delay(1500).fadeIn(1000);
         });
     };
 
@@ -29,7 +27,7 @@ define(function() {
     {
         $(document).ready(function() {
                 $('#play-btn').removeClass('hidden');
-                $('#play-btn').fadeIn(1000);
+                $('#play-btn').delay(1500).fadeIn(1000);
         });
     };
     
