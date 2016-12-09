@@ -24,18 +24,7 @@ Drassil.parseNews = function(url) {
             for (var i = 0; i < title.length; i++) {
                     document.getElementById("title-"+[i+1]).innerHTML = title[i];
                     document.getElementById("content-"+[i+1]).innerHTML = content[i];
-                    if(Drassil.PLATFORM === 'electron')
-                    {
-                        var object = document.getElementById("link-"+[i+1]);
-                        object.setAttribute( "onClick", "Drassil.openOtherSite('"+newsLink[i]+"');" );
-                    }
-                    else if(Drassil.PLATFORM === 'browser')
-                    {
-                        var object = document.getElementById("link-"+[i+1]);
-                        //object.href = newsLink[i];
-                        object.setAttribute("href", newsLink[i]);
-                        object.setAttribute("target", "_blank");
-                    }
+                    document.getElementById("link-"+[i+1]).setAttribute( "onClick", "Drassil.openOtherSite('"+newsLink[i]+"');" );
             };
     });
 
@@ -45,5 +34,3 @@ Drassil.parseNews = function(url) {
         $('.title, .content').delay(1500).fadeIn(1000);
     });
 };
-
-
