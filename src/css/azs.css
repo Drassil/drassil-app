@@ -24,3 +24,12 @@ html, body{
 	top:30px;
 }
 
+.title {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.titleRow, .contentRow {
+    background-color: rgba(0, 0, 0, 0.8);
+}
