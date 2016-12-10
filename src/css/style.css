@@ -1,18 +1,19 @@
 html, body{
-	font-family: 'Montserrat', sans-serif;
-/*font-family: 'Roboto', sans-serif; */
-	color:white;
-	background-color:#4d4d4d;
-	background-image:url("../../data/images/background7.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	-webkit-background-size: cover;
+    margin: 0; 
+    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Roboto', sans-serif; */
+    color:white;
+    background-color:#4d4d4d;
+    background-image:url("../../data/images/background7.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-	height:100%;
+    height:100%;
 }
 
 body {
@@ -42,110 +43,110 @@ html.loading body {
 }
 
 h1{
-	text-align:center;
+    text-align:center;
 }
 
 a, a:hover{
-	text-decoration:none;
+    text-decoration:none;
 }
 
 .navbar{
-	border-radius: 0px;
-	border:none;
-	background-color: rgba(39, 111, 172, 0.75);
-	border-color: rgba(39, 111, 172, 0.75);
-	color: #ffffff;
-	z-index:1;
+    border-radius: 0px;
+    border:none;
+    background-color: rgba(39, 111, 172, 0.75);
+    border-color: rgba(39, 111, 172, 0.75);
+    color: #ffffff;
+    z-index:1;
 }
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
-	color: #fff;
+    color: #fff;
     background-color: rgba(23, 27, 28, 0.28);
 }
 
 .navbar-inverse .navbar-brand {
-	color:white;
+    color:white;
 }
 
 .navbar-inverse .navbar-brand:hover {
-	color:orange;
+    color:orange;
 }
 
 .navbar-inverse .navbar-nav>li>a {
-	color:white;
+    color:white;
 }
 .navbar-inverse .navbar-nav>li>a:hover {
-	color:orange;
+    color:orange;
 }
 
 #close-btn:hover{
-	color:red !important;
+    color:red !important;
 }
 
 .draggable{
-	width:230px;
-	height:50px;
-	background-color:rgba(0, 0, 0, 0);
-	border: 3px dotted;
-	border-color:white;
-	border-radius:2px;
-	-webkit-app-region: drag;
+    width:230px;
+    height:50px;
+    background-color:rgba(0, 0, 0, 0);
+    border: 3px dotted;
+    border-color:white;
+    border-radius:2px;
+    -webkit-app-region: drag;
 }
 .button {
-	width: 100%;
-	max-width:476px;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	margin: 0 auto;
+    width: 100%;
+    max-width:476px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
     box-shadow: 1px 1px 10px #000000;
-	border-radius: 3px;
-	filter: brightness(70%);
-	z-index: 100;
+    border-radius: 3px;
+    filter: brightness(70%);
+    z-index: 100;
 
 }
 
 img {
-	max-width:100%;
-	max-height:100%;
-	border-radius: 3px;
+    max-width:100%;
+    max-height:100%;
+    border-radius: 3px;
 }
 
 .button:hover {
-	filter: brightness(100%);
-	z-index: 10000;
+    filter: brightness(100%);
+    z-index: 10000;
 }
 
 #newage-btn{
-	/*background-image:url("../../data/images/tile1.png");*/
+    /*background-image:url("../../data/images/tile1.png");*/
 }
 
 #azs-btn{
-	/*background-image:url("../../data/images/tile2.png");*/
+    /*background-image:url("../../data/images/tile2.png");*/
 }
 
 #gdr-btn{
-	/*background-image:url("../../data/images/tile3.png");*/
-	filter: brightness(20%) !important;
+    /*background-image:url("../../data/images/tile3.png");*/
+    filter: brightness(20%) !important;
 
 }
 
 #gdr-btn:hover{
-	filter: brightness(20%) !important;
+    filter: brightness(20%) !important;
 }
 
 .container{
-	margin-top: 60px;
+    margin-top: 60px;
 }
 
 footer {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 10px;
-  background-color: #36393E;
-  text-align: center;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #36393E;
+    text-align: center;
 }
 
 
@@ -165,4 +166,17 @@ footer {
         background-color: rgba(39, 111, 172, 0.95);
         border-color: rgba(39, 111, 172, 0.95);
     }
+}
+
+#ifm {
+    margin-top: 50px;
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 100vh;        /* Viewport-relative units */
+    width: 100vw;
+}
+
+iframe, object, embed {
+    max-width: 100%;
 }

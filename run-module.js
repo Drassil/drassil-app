@@ -22,6 +22,7 @@ function run(host, port, dev, callback) {
         expr.use("/", express.static(__dirname, options)); //use static files in ROOT/public folder
 
         expr.use("/site/", express.static(path.join(__dirname, "site"), {index: "index.html"}));
+        expr.use("/modules/", express.static(path.join(__dirname, "modules"), {index: "index.html"}));
 
         expr.get("/", function (request, response) { //root dir
             console.log(request, response);
