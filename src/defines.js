@@ -6,14 +6,16 @@ Drassil.defines={
         "forum" : "https://azerothshard.org/forums/",
         "about" : "https://azerothshard.org/about",
         "settings" : "src/platform-electron/impostazioni.html",
-        "news_json" : "https://azerothshard.org/wp-json/wp/v2/posts?per_page=6"
+        "news_json" : "https://azerothshard.org/wp-json/wp/v2/posts?per_page=6",
+        "patches" : "http://ardb.api.azerothshard.org/index.php/patches"
     },
     "newage" : {
         "website" : "http://wownewage.com",
         "forum" : "https://community.wownewage.com",
         "about" : "https://wownewage.com/about",
         "settings" : "src/platform-electron/settings.html",
-        "news_json" : "https://wownewage.com/wp-json/wp/v2/posts?per_page=6"
+        "news_json" : "https://wownewage.com/wp-json/wp/v2/posts?per_page=6",
+        "patches" : "http://api.wownewage.com/patches"
     },
     "drassil" : {
         "website" : "http://warcraft.drassil.net",
@@ -46,6 +48,10 @@ if ((window && window.cordova) || getQueryParam("platform") === "cordova") {
     // running under electron
     //
     Drassil.PLATFORM="electron";
+
+    var electron = require("electron");
+    var DrassilEct=electron.remote.getGlobal("DrassilEct");
+    DrassilEct.webDefines=Drassil.defines;
 
     // avoid conflicts with requirejs/webpack
     window.nodeRequire = require;
