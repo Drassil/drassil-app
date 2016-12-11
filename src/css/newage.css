@@ -4,15 +4,15 @@
 
 html, body{
 	margin: 0;
-    background: #000000 url("../../data/images/background2.jpg") no-repeat fixed center cover !important;
-	/*background-repeat: no-repeat !important;*/
-	/*background-position: center !important;*/
-	background-size: cover !important;
-	/*background-attachment: fixed !important;*/
+    background: #000000 url("../../data/images/background2.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover !important;
+    background-size: cover;
 	height:100%;
 }
 
