@@ -10,3 +10,6 @@
 [submodule "modules/azs-player-stats"]
 	path = modules/azs-player-stats
 	url = https://github.com/AzerothShard/module-player-stats.git
+[submodule "modules/drassil-search-engine"]
+	path = modules/drassil-search-engine
+	url = https://github.com/drassil-net/TC-Search-Engine.git
