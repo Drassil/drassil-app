@@ -7,7 +7,9 @@ Drassil.defines={
         "about" : "https://azerothshard.org/about",
         "settings" : "src/platform-electron/impostazioni.html",
         "news_json" : "https://azerothshard.org/wp-json/wp/v2/posts?per_page=6",
-        "patches" : "http://ardb.api.azerothshard.org/index.php/patches"
+        "patches" : "http://ardb.api.azerothshard.org/index.php/patches",
+        "chat_direct" : "https://discordapp.com/channels/108619239681716224/108619239681716224",
+        "chat_invite" : "https://discord.gg/33FRWu5"
     },
     "newage" : {
         "website" : "http://wownewage.com",

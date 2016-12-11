@@ -8,6 +8,7 @@ define([
     var electron = window.nodeRequire('electron');
     var DrassilEct = electron.remote.require('./drassil-app/api.js');
     var Drassil = window.Drassil;
+    var chatWin = null;
 
     Drassil.appClose = function () {
         DrassilEct.api.appClose();
@@ -17,7 +18,7 @@ define([
         DrassilEct.api.appMinimize();
     };
 
-    Drassil.openOtherSite = function(url)
+    Drassil.openOtherSite = function (url)
     {
         DrassilEct.api.openExternal(url);
     };
@@ -25,6 +26,25 @@ define([
     Drassil.openSite = function (realm) {
         var siteUrl = Drassil.defines[realm].website;
         DrassilEct.api.openExternal(siteUrl);
+    };
+
+    Drassil.openChat = function (realm) {
+        // avoid multiple opening
+        if (!chatWin) {
+            chatWin = new electron.remote.BrowserWindow({width: 800, height: 600, frame: true, webPreferences: {nodeIntegration: false}});
+
+            if (realm === 'azerothshard')
+            {
+                chatWin.loadURL(Drassil.defines.azerothshard.chat_invite);
+            } else
+            {
+                //
+            }
+
+            chatWin.on('closed', function () {
+                chatWin = null;
+            });
+        }
     };
 
     Drassil.openForum = function (realm) {

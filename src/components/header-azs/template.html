@@ -1,36 +1,42 @@
 <template id="header-azs">
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
-			  <a class="navbar-brand" href="site/en/home">Drassil</a>
-			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="site/it/azerothshard">Azeroth Shard</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Server<span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="/site/it/azerothshard/server-status">Giocatori Online</a></li>
-                                                <li class="hidden-xs"><a href="/site/it/azerothshard/player-map">Mappa giocatori</a></li>
-                                                <li><a href="/site/it/azerothshard/arena-stats">Statistiche Arena</a></li>
-                                                <li><a href="/site/it/azerothshard/bg-stats">Statistiche BG</a></li>
-                                                <li><a href="/site/it/azerothshard/player-stats">Classifica Giocatori</a></li>
-					</ul>
-					<li><a href="#" onclick="Drassil.openForum('azerothshard')">Forum</a></li>
-	                <li><a href="#" onclick="Drassil.openSite('azerothshard')">Sito Web</a></li>
-	                <li><a href="/site/en/download-apps" class="browser-element">Scarica l'app</a></li>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="site/en/home">Drassil</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="site/it/azerothshard">Azeroth Shard</a></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Server<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/site/it/azerothshard/server-status">Giocatori Online</a></li>
+                            <li class="hidden-xs"><a href="/site/it/azerothshard/player-map">Mappa giocatori</a></li>
+                            <li><a href="/site/it/azerothshard/arena-stats">Statistiche Arena</a></li>
+                            <li><a href="/site/it/azerothshard/bg-stats">Statistiche BG</a></li>
+                            <li><a href="/site/it/azerothshard/player-stats">Classifica Giocatori</a></li>
+                        </ul>
+                    <li><a href="#" onclick="Drassil.openForum('azerothshard')">Forum</a></li>
+                    <li><a href="#" onclick="Drassil.openSite('azerothshard')">Sito Web</a></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-commenting-o"></i> Chat<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="electron-element"><a href="#" onclick="Drassil.openChat('azerothshard')">Apri nel Launcher</a></li>
+                            <li><a href="#" onclick="Drassil.openOtherSite(Drassil.defines.azerothshard.chat_invite)">Apri nel Browser</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/site/en/download-apps" class="browser-element">Scarica l'app</a></li>
                 </ul>
-	    		<header-app-btn></header-app-btn>
-			</div>
-		</div>
-	</nav>
+                <header-app-btn></header-app-btn>
+            </div>
+        </div>
+    </nav>
 </template>
 <script>
-    registerComponent("header-azs",false,function() {
+    registerComponent("header-azs", false, function () {
         // after rendered
     });
 </script>
