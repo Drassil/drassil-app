@@ -31,7 +31,7 @@ define([
     Drassil.openChat = function (realm) {
         // avoid multiple opening
         if (!chatWin) {
-            chatWin = new electron.remote.BrowserWindow({width: 800, height: 600, frame: true, webPreferences: {nodeIntegration: false}});
+            chatWin = new electron.remote.BrowserWindow({width: 800, height: 600, frame: true, webPreferences: {nodeIntegration: false}, parent: electron.remote.getCurrentWindow()});
 
             if (realm === 'azerothshard')
             {
