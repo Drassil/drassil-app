@@ -4,8 +4,8 @@
 
 html, body{
 	margin: 0;
-    background-image:url("../../data/images/background2.jpg");
-	background-repeat: no-repeat;
+    background: #000000 url("../../data/images/background2.jpg") !important;
+	background-repeat: no-repeat !important;
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
