@@ -3,6 +3,7 @@
 }
 
 html, body{
+	margin: 0;
     background-image:url("../../data/images/background3.jpg");
 	background-repeat: no-repeat;
 	background-position: center;

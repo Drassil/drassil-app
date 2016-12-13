@@ -17,7 +17,9 @@ Drassil.defines={
         "about" : "https://wownewage.com/about",
         "settings" : "src/platform-electron/settings.html",
         "news_json" : "https://wownewage.com/wp-json/wp/v2/posts?per_page=6",
-        "patches" : "http://api.wownewage.com/patches"
+        "patches" : "http://api.wownewage.com/patches",
+        "chat_direct" : "https://discordapp.com/channels/202816741422792704/202816741422792704",
+        "chat_invite" : "https://discord.gg/3rnHyWa"
     },
     "drassil" : {
         "website" : "http://warcraft.drassil.net",
