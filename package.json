@@ -1,10 +1,11 @@
 {
   "name": "drassil-app-web",
   "scripts": {
-    "postinstall" : "git submodule update --recursive --init",
+    "postinstall" : "npm run submodule-upd",
     "build": "webpack --config webpack.config.js --progress --profile --colors",
     "start": "node run.js",
-    "start-dev": "node run.js dev"
+    "start-dev": "node run.js dev",
+    "submodule-upd" : "git submodule update --recursive --init"
   },
   "devDependencies": {
     "express": "^4.14.0",
