@@ -80,7 +80,7 @@ window.registerComponent = function(name, withShadow,callback) {
         // Grab DOM from doc.html's document.
         var text = mainDoc.querySelector("#" + name);
         element.innerHTML = text.cloneNode(true).innerHTML;
-        callback && callback();
+        callback && callback(element);
     };
 
     document.registerElement(name, {prototype: proto});

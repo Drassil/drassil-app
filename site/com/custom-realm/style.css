@@ -1,0 +1,19 @@
+* {
+  .border-radius(0) !important;
+}
+
+#realm-box {
+    color: #000;
+}
+
+#realm-elements{
+    margin-top: 20px;
+}
+
+.play-me {
+    margin-left: 10px;
+}
+
+realm-element div {
+    margin-bottom: 10px;
+}

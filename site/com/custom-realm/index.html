@@ -1,0 +1,35 @@
+<html lang="en-GB">
+    <head>
+        <script src="../../../src/pageCheck.js"></script>
+        <title>Custom Realm</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Custom Realm">
+        <meta name="keywords" content="Realm,custom,desktop">
+        <script>
+            window.Drassil.realm = "custom";
+        </script>
+        <link rel="stylesheet" href="{{location.path()}}/style.css">
+        <link rel="import" href="site/com/custom-realm/realm-element.html">
+    </head>
+    <body>
+    <script src="site/com/custom-realm/controller.js"></script>
+    <drassil-header></drassil-header>
+    <noscript><center><H1 style="color:red">ENABLE JAVASCRIPT!</H1></center></noscript>
+    <div class="app-download-page container">
+        <div class="row">
+            <input type="hidden" name="count" value="1" />
+            <div class="col-sm-12 control-group" id="fields">
+                <label class="control-label" for="field1">Custom Realm</label>
+                <div class="controls" id="profs"> 
+                    <form class="input-append">
+                        <div id="field">set realmlist <input autocomplete="off" class="input" id="realm-box" name="prof" type="text" placeholder="Type the realmlist" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
+                        <small>Press + to add a custom realmlist</small>
+                    </form>
+                </div>
+                <div id="realm-elements">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

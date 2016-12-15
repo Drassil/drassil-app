@@ -1,0 +1,28 @@
+<!-- 
+parameters:
+    data-realm
+-->
+<template id="realm-element">
+    <div class="row">
+        <div class="col-sm-4"><input disabled autocomplete="off" class="input form-control" id="field" name="field" type="text"></div>
+        <div class='col-sm-1'><button id="remove" class="btn btn-danger remove-me" >-</button></div>
+        <div class="col-sm-4"><button id="play" class="btn btn-success play-me" >PLAY</button></div>
+    </div>
+</template>
+<script>
+    registerComponent("realm-element", false, function (element) {
+        var el = $(element);
+        var realm = el.data("realm");
+
+        el.find("input").val(realm);
+
+        el.find(".remove-me").click(function () {
+            window.Drassil.removeCustomRealm(realm);
+            el.remove();
+        });
+        
+        el.find(".play-me").click(function () {
+            window.Drassil.launchWoW(realm);
+        });
+    });
+</script>
