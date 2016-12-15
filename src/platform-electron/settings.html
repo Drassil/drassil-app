@@ -36,6 +36,19 @@
                 $("#wowFolder").attr("placeholder", wowFolder[0].toString());
                 window.wowFolder = wowFolder[0];
             };
+            
+            
+            var checkOptionalPatches = function() {
+                var res=[];
+
+                // non è asincrona
+                $("input[name='optionalCheckbox']").each( function () {
+                    res.push($(this).val());
+                });
+
+                return res;
+            };
+           
         </script>
     </head>
     <body>
@@ -61,13 +74,12 @@
             <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="selectWoWFolder()"><div id="selectFolderButton">SELECT FOLDER</div></a></div>
                 <div class="col-lg-3 col-md-4 col-sm-5 col-xs-6"><input id="wowFolder" type="text" name="text" placeholder="Select WoW folder" readonly="readonly" /></div>
-            </div>
+                <div class="col-lg-3 col-md-4 col-sm-5 col-xs-6"><label><input type="checkbox" name="optionalCheckbox" value="patch-b">New characters models</label></div></div>
             <div class="row">
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="settings.saveSettings(wowFolder)"><div id="selectFolderButton">SAVE</div></a></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><a href="#" onclick="settings.saveSettings(wowFolder, checkOptionalPatches())"><div id="selectFolderButton">SAVE</div></a></div>
                 <div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-restart">Launcher must be restarted manually after setting the folder</span></div>
                 <div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-version">Launcher version:</span></div>
                 <div class="col-lg-5 col-md-6 col-sm-7 col-xs-7"><span id="info-dev">Designed by Jestus</span></div>
-                <!--<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5"><input id="ClearCacheCheckbox" type="checkbox" name="ClearCache"><label for ClearCacheCheckbox>Clear Cache</label></div>-->
             </div>
         </div>
         <script>
