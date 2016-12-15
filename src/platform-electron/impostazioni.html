@@ -23,7 +23,7 @@
 
             var electron = require('electron');
             var Settings = electron.remote.require('./drassil-app/settings.js');
-            var settings = new Settings(electron.remote.getCurrentWindow(),$);
+            var settings = new Settings(electron.remote.getCurrentWindow());
             var Drassil = electron.remote.getGlobal('Drassil');
             
             settings.list().get('wowFolder.wowFolder').then(function(val) {
