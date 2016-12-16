@@ -60,6 +60,10 @@ define([
     Drassil.settingsOpen = function (Drassil) {
         DrassilEct.api.settingsOpen(Drassil);
     };
+    
+    Drassil.optionalOpen = function (Drassil) {
+        DrassilEct.api.optionalOpen(Drassil);
+    };
 
     Drassil.checkFirstStart = function () {
         DrassilEct.api.checkFirstStart();
@@ -96,7 +100,7 @@ define([
     };
 
     Drassil.prepareRealm = function (currentRealm) {
-        DrassilEct.api.switchRealm(currentRealm, new jQueryMods(), electron.remote.getCurrentWindow());
+        DrassilEct.api.switchRealm(currentRealm, new window.Drassil.jQueryMods(), electron.remote.getCurrentWindow());
     };
 
     return Drassil;

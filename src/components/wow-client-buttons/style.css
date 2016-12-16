@@ -19,7 +19,6 @@
 }
 
 #play-btn {
-    color: yellow;
     font-weight: bold;
     cursor: pointer !important;
 }
@@ -31,7 +30,7 @@
 
 .sidebar-btn span{
     display: inline-block;
-    vertical-align: middle;    
+    vertical-align: middle;
 }
 
 .sidebar-btn:hover {
@@ -50,21 +49,25 @@
 }
 
 .sidebar-btn-1{
-    bottom:360px;
+    bottom:420px;
 }
 
 .sidebar-btn-2{
-    bottom:300px;
+    bottom:360px;
 }
 
 .sidebar-btn-3{
-    bottom:240px;
+    bottom:300px;
 }
 
 .sidebar-btn-4{
-    bottom:180px;
+    bottom:240px;
 }
 
 .sidebar-btn-5{
+    bottom:180px;
+}
+
+.sidebar-btn-6{
     bottom:120px;
 }

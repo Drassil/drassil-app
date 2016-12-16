@@ -1,34 +1,33 @@
 // requirejs module ( for site )
-define(function() {
+(function() {
     function jQueryMods() {    };
     
     jQueryMods.prototype.fadeInDownloadBar = function() {
         $(document).ready(function() {
-                $('.download').removeClass('hidden');
-                $('.download').delay(1500).fadeIn(1000);
+            $('.download').removeClass('hidden');
+            $('.download').delay(1500).fadeIn(1000);
         });
     };
 
     jQueryMods.prototype.fadeOutDownloadBar = function()
     {
         $(document).ready(function() {
-                $('.download').delay(1500).fadeOut(1000);
+            $('.download').delay(1500).fadeOut(1000);
         });
     };
 
     jQueryMods.prototype.fadeOutPlayButton = function()
     {
         $(document).ready(function() {
-                $("#play-btn").text("Wait...");
-                $("#play-btn").attr("disabled", "disabled");
+            $("#play-btn").text("Wait...");
         });
     };
     
     jQueryMods.prototype.fadeInPlayButton = function()
     {
         $(document).ready(function() {
-                $("#play-btn").text("PLAY!");
-                $("#play-btn").removeAttr("disabled");
+            $("#play-btn").text("Play");
+            $("#play-btn").attr("onclick", "Drassil.launchWoW(Drassil.realm)");
         });
     };
     
@@ -41,6 +40,23 @@ define(function() {
         $(".progress-bar").attr("style", "width:"+realPercent+"%");
     };
     
+    jQueryMods.prototype.switchToUninstallButton = function(patchName)
+    {
+        $(document).ready(function() {
+            $("#"+patchName).text("Remove");
+            $("#"+patchName).parent().attr("onclick", "optional.uninstallPatch('"+patchName+"')");
+            $("#"+patchName+"-disable").parent().attr("onclick", "optional.disablePatch('"+patchName+"')");
+            $("#"+patchName+"-disable").attr("style", "opacity:1 !important; pointer-events:auto !important;");
+        });
+    };
+    
+    jQueryMods.prototype.disableDisableButton = function()
+    {
+        $(document).ready(function() {
+            $("#disable").attr("disabled", "disabled");
+        });
+    };
+    
     jQueryMods.prototype.getJSON = function(url, callback)
     {
         if (url) {
@@ -49,6 +65,8 @@ define(function() {
             });
         }
     }
+    
+    window.Drassil.jQueryMods = jQueryMods;
 
     return jQueryMods;
-});
+})();
