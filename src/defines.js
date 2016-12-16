@@ -21,6 +21,9 @@ Drassil.defines={
         "chat_direct" : "https://discordapp.com/channels/202816741422792704/202816741422792704",
         "chat_invite" : "https://discord.gg/3rnHyWa"
     },
+    "custom" : {
+        "patches" : "http://api.wownewage.com/nopatch",
+    },
     "drassil" : {
         "website" : "http://warcraft.drassil.net",
         "forum" : "http://forum.drassil.net",
