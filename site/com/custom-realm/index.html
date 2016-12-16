@@ -7,6 +7,7 @@
         <meta name="keywords" content="Realm,custom,desktop">
         <script>
             window.Drassil.realm = "custom";
+            Drassil.checkFirstStart();
         </script>
         <link rel="stylesheet" href="{{location.path()}}/style.css">
         <link rel="import" href="site/com/custom-realm/realm-element.html">
@@ -22,14 +23,25 @@
                 <label class="control-label" for="field1">Custom Realm</label>
                 <div class="controls" id="profs"> 
                     <form class="input-append">
-                        <div id="field">set realmlist <input autocomplete="off" class="input" id="realm-box" name="prof" type="text" placeholder="Type the realmlist" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
+                        <div id="field">
+                            set realmlist <input autocomplete="off" class="input" id="realm-box" name="prof" type="text" placeholder="Type the realmlist" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button>
+                        </div>
                         <small>Press + to add a custom realmlist</small>
                     </form>
                 </div>
                 <div id="realm-elements">
                 </div>
+                <div class="sidebar">
+                    <a class="sidebar-btn sidebar-btn-1 electron-element" id="settings-btn" href="#" onclick="Drassil.settingsOpen()"><div><span>Settings</span></div></a>
+                    <a class="sidebar-btn sidebar-btn-2 electron-element" id="reset-btn" href="#" onclick="Drassil.resetWoW()"><div><span>Reset WoW</span></div></a>
+                    <a class="sidebar-btn sidebar-btn-3 electron-element" id="cache-btn" href="#" onclick="Drassil.clearCache()"><div><span>Clear Cache</span></div></a>
+                    <div class="collapse" id="hide"></div>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        Drassil.prepareRealm("custom");
+    </script>
 </body>
 </html>
