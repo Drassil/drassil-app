@@ -11,6 +11,7 @@
 
 .drassil-games-class {
     margin-bottom : 0px;
+    -webkit-app-region: no-drag;
 }
 
 .drassil-games-class .dropdown-menu {

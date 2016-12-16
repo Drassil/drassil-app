@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class>
+    <head>
+        <meta charset="UTF-8">
+        <title>Drassil App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            window.Drassil={};
+            if (typeof module === 'object') {
+                window.module = module;
+                module = undefined;
+            }</script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+        <link href="/modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/src/css/style.css" rel="stylesheet" type="text/css">
+        <script src="/modules/jquery/jquery.min.js"></script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/modules/bootstrap/js/bootstrap.min.js"></script>
+        <link href="/src/platform-electron/optionals/optional.css" rel="stylesheet" type="text/css">
+        <script src="/src/platform-electron/jQueryMods.js"></script>
+        <script>
+            if (window.module)
+                module = window.module;
+            
+            var jqm=new window.Drassil.jQueryMods();
+            
+            var electron = require('electron');
+            var Optional = electron.remote.require('./drassil-app/optional.js');
+            var optional = new Optional(electron.remote.getCurrentWindow(), jqm);
+            var Drassil = electron.remote.getGlobal('Drassil');
+            
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Drassil App</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <li><div class="draggable"></div></li>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="javascript:void(0)" id="close-btn" onclick="optional.appClose()"><span class="glyphicon glyphicon-remove"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div id="optional-patches">
+            <span class="separator">Patches</span>
+                <div class="row">
+                    <div class="col-md-2 col-sm-2 col-xs-2">HD Models</div>
+                    <div class="col-md-1 col-sm-2 col-xs-3"><a href="#" onclick="optional.installPatch('patch-B')"><button id="patch-B" class="optionalButtons" >Install</button></a></div>
+                    <!--<div class="col-md-1 col-sm-2 col-xs-3"><a href="#" onclick="optional.uninstallPatch('patch-B')"><button id="remove" class="optionalButtons" >Remove</button></a></div>-->
+                    <div class="col-md-1 col-sm-2 col-xs-3"><a href="#" onclick="#"><button id="patch-B-disable" class="disabled optionalButtons">Disable</button></a></div>
+                </div>
+                <div class="row"><br></div>
+            </div>
+            <div class="row"><br></div>
+            <div id="optional-addons">
+                <span class="separator">Addons</span>
+                <div class="row">
+                    <div class="col-md-2 col-sm-2 col-xs-2">Addons 1</div>
+                    <div class="col-md-1 col-sm-2 col-xs-3"><a href="#" onclick="optional.wip()"><button id="addonName" class="optionalButtons" >Install</button></a></div>
+                    <div class="col-md-1 col-sm-2 col-xs-3"><a href="#" onclick="optional.wip()"><button id="addonName-disable" class="disabled optionalButtons">Disable</button></a></div>
+                </div>
+                <div class="row"><br></div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-2 col-xs-2">Addons 2</div>
+                    <div class="col-md-1 col-sm-2 col-xs-3"><a href="#" onclick="optional.wip()"><button id="addonName" class="optionalButtons" >Install</button></a></div>
+                    <div class="col-md-1 col-sm-2 col-xs-3"><a href="#" onclick="optional.wip()"><button id="addonName-disable" class="disabled optionalButtons">Disable</button></a></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        optional.switchToRemove();
+    </script>
+</html>

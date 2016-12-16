@@ -1,0 +1,23 @@
+.separator{
+    font-size: 40px;
+    color:white;
+}
+
+.optionalButtons{
+    background-color: #678194;
+    color:white;
+    border: 1px solid white;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.optionalButtons:hover{
+    color:orange;
+    border-color:orange;
+}
+
+.disabled{
+   pointer-events: none;
+   opacity: 0.3;
+}
