@@ -43,8 +43,9 @@
                     </button>
                     <a class="navbar-brand" href="#">Drassil App</a>
                 </div>
+                
                 <div class="collapse navbar-collapse" id="myNavbar">
-                    <li><div class="draggable"></div></li>
+                    <div class="draggable"></div>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="javascript:void(0)" id="close-btn" onclick="optional.appClose()"><span class="glyphicon glyphicon-remove"></span></a></li>
                     </ul>
@@ -56,9 +57,8 @@
             <span class="separator">Patches</span>
                 <div class="row">
                     <div class="col-md-2 col-sm-2 col-xs-2">HD Models</div>
-                    <div class="col-md-1 col-sm-2 col-xs-3"><a href="#" onclick="optional.installPatch('patch-B')"><button id="patch-B" class="optionalButtons" >Install</button></a></div>
-                    <!--<div class="col-md-1 col-sm-2 col-xs-3"><a href="#" onclick="optional.uninstallPatch('patch-B')"><button id="remove" class="optionalButtons" >Remove</button></a></div>-->
-                    <div class="col-md-1 col-sm-2 col-xs-3"><a href="#" onclick="#"><button id="patch-B-disable" class="disabled optionalButtons">Disable</button></a></div>
+                    <div class="col-md-1 col-sm-2 col-xs-3"><button id="patch-B" class="optionalButtons" onclick="optional.installPatch('patch-B')" >Install</button></div>
+                    <div class="col-md-1 col-sm-2 col-xs-3"><button id="patch-B-disable" class="disabled optionalButtons">Disable</button></div>
                 </div>
                 <div class="row"><br></div>
             </div>
