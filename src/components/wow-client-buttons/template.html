@@ -6,9 +6,9 @@
 
         <a class="sidebar-btn sidebar-btn-1 electron-element" id="settings-btn" href="#" onclick="Drassil.settingsOpen()"><div><span>Settings</span></div></a>
         <a class="sidebar-btn sidebar-btn-2 electron-element" id="reset-btn" href="#" onclick="Drassil.resetWoW()"><div><span>Reset WoW</span></div></a>
-        <a class="sidebar-btn sidebar-btn-3 electron-element" id="settings-btn" href="/site/com/custom-realm/"><div><span>Custom Realmlist</span></div></a>
+        <a class="sidebar-btn sidebar-btn-3 electron-element" id="settings-btn" href="/site/com/custom-realm/"><div><span>Custom Realm</span></div></a>
         <a class="sidebar-btn sidebar-btn-4 electron-element" id="cache-btn" href="#" onclick="Drassil.clearCache()"><div><span>Clear Cache</span></div></a>
-        <a class="sidebar-btn sidebar-btn-5 hidden2 electron-element" id="play-btn" href="#" onclick="Drassil.launchWoW(Drassil.realm)"><div><span>Play</span></div></a>
+        <button class="sidebar-btn sidebar-btn-5 electron-element" id="play-btn" onclick="Drassil.launchWoW(Drassil.realm)" disabled>Wait...</button>
         <div class="collapse" id="hide"></div>
     </div>
 </template>

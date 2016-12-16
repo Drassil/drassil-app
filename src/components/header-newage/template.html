@@ -1,40 +1,40 @@
 <template id="header-newage">
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
-			  <a class="navbar-brand" href="site/en/home">Drassil</a>
-			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="site/en/newage">NewAge</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Server<span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="/site/en/newage/server-status">Online Players</a></li>
-                        <li><a href="/site/en/newage/arena-stats">Arena Stats</a></li>
-					</ul>
-					<li><a href="#" onclick="Drassil.openSite('newage')">Website</a></li>
-					<li><a href="#" onclick="Drassil.openForum('newage')">Forum</a></li>
-					<li><a href="/site/en/newage/database">Database</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-commenting-o"></i> Chat<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li class="electron-element"><a href="#" onclick="Drassil.openChat('newage')">Open in Launcher</a></li>
-							<li><a href="#" onclick="Drassil.openOtherSite(Drassil.defines.newage.chat_invite)">Open in Browser</a></li>
-						</ul>
-					</li>
-					<li><a href="/site/en/download-apps" class="browser-element">Download our apps</a></li>
-				</ul>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <drassil-games></drassil-games>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="site/en/newage">NewAge</a></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Server<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/site/en/newage/server-status">Online Players</a></li>
+                            <li><a href="/site/en/newage/arena-stats">Arena Stats</a></li>
+                        </ul>
+                    <li><a href="#" onclick="Drassil.openSite('newage')">Website</a></li>
+                    <li><a href="#" onclick="Drassil.openForum('newage')">Forum</a></li>
+                    <li><a href="/site/en/newage/database">Database</a></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-commenting-o"></i> Chat<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="electron-element"><a href="#" onclick="Drassil.openChat('newage')">Open in Launcher</a></li>
+                            <li><a href="#" onclick="Drassil.openOtherSite(Drassil.defines.newage.chat_invite)">Open in Browser</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/site/en/download-apps" class="browser-element">Download our apps</a></li>
+                </ul>
                 <header-app-btn></header-app-btn>
-			</div>
-		</div>
-	</nav>
+            </div>
+        </div>
+    </nav>
 </template>
 <script>
-    registerComponent("header-newage",false,function() {
+    registerComponent("header-newage", false, function () {
         // after rendered
     });
 </script>

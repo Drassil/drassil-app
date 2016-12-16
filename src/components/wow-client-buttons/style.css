@@ -18,6 +18,17 @@
     color:white;
 }
 
+#play-btn {
+    color: yellow;
+    font-weight: bold;
+    cursor: pointer !important;
+}
+
+#play-btn:disabled {
+    background-color: #666666;
+    cursor: initial !important;
+}
+
 .sidebar-btn span{
     display: inline-block;
     vertical-align: middle;    

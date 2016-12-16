@@ -19,15 +19,16 @@ define(function() {
     jQueryMods.prototype.fadeOutPlayButton = function()
     {
         $(document).ready(function() {
-                $('#play-btn').fadeOut(1);
+                $("#play-btn").text("Wait...");
+                $("#play-btn").attr("disabled", "disabled");
         });
     };
     
     jQueryMods.prototype.fadeInPlayButton = function()
     {
         $(document).ready(function() {
-                $('#play-btn').removeClass('hidden');
-                $('#play-btn').delay(1500).fadeIn(1000);
+                $("#play-btn").text("PLAY!");
+                $("#play-btn").removeAttr("disabled");
         });
     };
     

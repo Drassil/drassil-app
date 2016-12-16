@@ -1,0 +1,18 @@
+.drassil-games-class a,
+.drassil-games-class a:focus,
+.drassil-games-class a:hover {
+    text-decoration: none; /* no underline */
+    color: white;
+}
+
+.drassil-games-class li {
+    list-style: none;
+}
+
+.drassil-games-class {
+    margin-bottom : 0px;
+}
+
+.drassil-games-class .dropdown-menu {
+    margin-top: 10px;
+}

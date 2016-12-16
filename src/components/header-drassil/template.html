@@ -1,28 +1,28 @@
 <template id="drassil-header">
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
-			  <a class="navbar-brand" href="site/en/home">Drassil</a>
-			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="site/en/home">Home</a></li>
-					<li><a href="#" onclick="Drassil.openAbout('drassil')">About us</a></li>
-					<li><a href="#" onclick="Drassil.openForum('drassil')">Forum</a></li>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <drassil-games></drassil-games>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="site/en/home">Home</a></li>
+                    <li><a href="#" onclick="Drassil.openAbout('drassil')">About us</a></li>
+                    <li><a href="#" onclick="Drassil.openForum('drassil')">Forum</a></li>
                     <li><a href="/site/en/download-apps" class="browser-element">Download our apps</a></li>
-				</ul>
+                </ul>
                 <header-app-btn></header-app-btn>
-			</div>
-		</div>
-	</nav>
+            </div>
+        </div>
+    </nav>
 </template>
 <script>
-    registerComponent("drassil-header",false,function() {
+    registerComponent("drassil-header", false, function () {
         // after rendered
     });
 </script>
