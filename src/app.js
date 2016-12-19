@@ -40,6 +40,15 @@ app.config(['$routeProvider','$locationProvider','$ngxtProvider',function($route
 app.run(function($rootScope,$timeout,$location) {
     $rootScope.location = $location;
     
+    $rootScope.isActive = function (viewLocation) { 
+        if (viewLocation === $location.path()) {
+            console.log(viewLocation+" ---- "+$location.path());
+            return "active";
+        } else {
+            return false;
+        }
+    };
+    
     $rootScope.$on("$viewContentLoaded",function() {
         $timeout(function() { // workaround to avoid async issues
             // removing all elements that are not suitable for other platforms

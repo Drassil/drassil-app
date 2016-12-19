@@ -12,12 +12,14 @@
             Drassil.realm = "azerothshard";
             Drassil.checkFirstStart();
 
-            if (!global.firstOpen) {
-                if (Drassil.PLATFORM === "electron")
-                    Drassil.openChat("azerothshard");
-            }
+            if (typeof global !== 'undefined') {
+                if (!global.firstOpen) {
+                    if (Drassil.PLATFORM === "electron")
+                        Drassil.openChat("azerothshard");
+                }
 
-            global.firstOpen = true;
+                global.firstOpen = true;
+            }
 
         </script>
     </head>
