@@ -46,7 +46,7 @@
         $(document).ready(function () {
             $("#" + patchName).text("Remove");
             $("#" + patchName).attr("onclick", "optional.uninstallPatch('" + patchName + "')");
-            $("#" + patchName + "-disable").attr("onclick", "optional.disablePatch('" + patchName + "')");
+            $("#" + patchName + "-disable").attr("onclick", "optional.backupPatch('" + patchName + "')");
             $("#" + patchName + "-disable").attr("style", "opacity:1 !important; pointer-events:auto !important;");
         });
     };
