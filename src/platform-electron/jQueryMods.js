@@ -54,7 +54,7 @@
     jQueryMods.prototype.switchToInstallButton = function (patchName)
     {
         $(document).ready(function () {
-            $("#" + patchName).text("install");
+            $("#" + patchName).text("Install");
             $("#" + patchName).attr("onclick", "optional.installPatch('" + patchName + "')");
             $("#" + patchName + "-disable").removeAttr("onclick");
             $("#" + patchName + "-disable").attr("style", "opacity: 0.3 !important; pointer-events:none !important;");
