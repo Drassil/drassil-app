@@ -46,7 +46,7 @@
         $(document).ready(function () {
             $("#" + patchName).text("Remove");
             $("#" + patchName).attr("onclick", "optional.uninstallPatch('" + patchName + "')");
-            $("#" + patchName + "-disable").attr("onclick", "optional.disablePatch('" + patchName + "')");
+            $("#" + patchName + "-disable").attr("onclick", "optional.backupPatch('" + patchName + "')");
             $("#" + patchName + "-disable").attr("style", "opacity:1 !important; pointer-events:auto !important;");
         });
     };
@@ -54,7 +54,7 @@
     jQueryMods.prototype.switchToInstallButton = function (patchName)
     {
         $(document).ready(function () {
-            $("#" + patchName).text("install");
+            $("#" + patchName).text("Install");
             $("#" + patchName).attr("onclick", "optional.installPatch('" + patchName + "')");
             $("#" + patchName + "-disable").removeAttr("onclick");
             $("#" + patchName + "-disable").attr("style", "opacity: 0.3 !important; pointer-events:none !important;");
