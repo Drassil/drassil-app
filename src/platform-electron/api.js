@@ -76,10 +76,10 @@ define([
     Drassil.resetWoW = function () {
         if (Drassil.realm === "newage")
         {
-            urlJSON = "http://api.wownewage.com/patches";
+            urlJSON = Drassil.defines.newage.patches;
         } else if (Drassil.realm === "azerothshard")
         {
-            urlJSON = "http://ardb.api.azerothshard.org/index.php/patches";
+            urlJSON = Drassil.defines.azerothshard.patches;
         } else
         {
             urlJSON = null;
