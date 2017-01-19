@@ -22,14 +22,14 @@
         <script>
             if (window.module)
                 module = window.module;
-            
+
             var jqm=new window.Drassil.jQueryMods();
-            
+
             var electron = require('electron');
             var Optional = electron.remote.require('./drassil-app/optional.js');
             var optional = new Optional(electron.remote.getCurrentWindow(), jqm);
             var Drassil = electron.remote.getGlobal('Drassil');
-            
+
         </script>
     </head>
     <body>
@@ -43,7 +43,7 @@
                     </button>
                     <a class="navbar-brand" href="#">Drassil App</a>
                 </div>
-                
+
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <div class="draggable"></div>
                     <ul class="nav navbar-nav navbar-right">
@@ -64,6 +64,11 @@
                     <div class="col-md-2 col-sm-2 col-xs-2">Environment HD</div>
                     <div class="col-md-1 col-sm-2 col-xs-3"><button id="patch-C" class="optionalButtons" onclick="optional.installPatch('patch-C')" >Install</button></div>
                     <div class="col-md-1 col-sm-2 col-xs-3"><button id="patch-C-disable" class="disabled optionalButtons">Backup</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-2 col-xs-2">Mount and Mob HD</div>
+                    <div class="col-md-1 col-sm-2 col-xs-3"><button id="patch-E" class="optionalButtons" onclick="optional.installPatch('patch-E')" >Install</button></div>
+                    <div class="col-md-1 col-sm-2 col-xs-3"><button id="patch-E-disable" class="disabled optionalButtons">Backup</button></div>
                 </div>
                 <div class="row"><br></div>
             </div>
