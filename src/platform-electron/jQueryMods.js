@@ -43,12 +43,12 @@
 
     jQueryMods.prototype.switchToUninstallButton = function (name, type = 0) //type = 0 -> patch || type = 1 -> addons
     {
-        if(type = 1)
+        console.log(name+' '+type);
+        if(type === 1)
         {
             $(document).ready(function () {
                 $("#" + name).text("Remove");
                 $("#" + name).attr("onclick", "optional.uninstallAddons('" + name + "')");
-                $("#" + name + "-disable").attr("onclick", "optional.backupAddons('" + name + "')");
                 $("#" + name + "-disable").attr("style", "opacity:1 !important; pointer-events:auto !important;");
             });
         }
