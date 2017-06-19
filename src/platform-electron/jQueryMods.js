@@ -41,31 +41,56 @@
         $(".progress-bar").attr("style", "width:" + realPercent + "%");
     };
 
-    jQueryMods.prototype.switchToUninstallButton = function (patchName)
+    jQueryMods.prototype.switchToUninstallButton = function (name, type = 0) //type = 0 -> patch || type = 1 -> addons
     {
-        $(document).ready(function () {
-            $("#" + patchName).text("Remove");
-            $("#" + patchName).attr("onclick", "optional.uninstallPatch('" + patchName + "')");
-            $("#" + patchName + "-disable").attr("onclick", "optional.backupPatch('" + patchName + "')");
-            $("#" + patchName + "-disable").attr("style", "opacity:1 !important; pointer-events:auto !important;");
-        });
+        console.log(name+' '+type);
+        if(type === 1)
+        {
+            $(document).ready(function () {
+                $("#" + name).text("Remove");
+                $("#" + name).attr("onclick", "optional.uninstallAddons('" + name + "')");
+                $("#" + name + "-disable").attr("style", "opacity:1 !important; pointer-events:auto !important;");
+            });
+        }
+        else
+        {
+            $(document).ready(function () {
+                $("#" + name).text("Remove");
+                $("#" + name).attr("onclick", "optional.uninstallPatch('" + name + "')");
+                $("#" + name + "-disable").attr("onclick", "optional.backupPatch('" + name + "')");
+                $("#" + name + "-disable").attr("style", "opacity:1 !important; pointer-events:auto !important;");
+            });
+        }
     };
     
-    jQueryMods.prototype.switchToInstallButton = function (patchName)
+    jQueryMods.prototype.switchToInstallButton = function (name, type = 0) //type = 0 -> patch || type = 1 -> addons
     {
-        $(document).ready(function () {
-            $("#" + patchName).text("Install");
-            $("#" + patchName).attr("onclick", "optional.installPatch('" + patchName + "')");
-            $("#" + patchName + "-disable").removeAttr("onclick");
-            $("#" + patchName + "-disable").attr("style", "opacity: 0.3 !important; pointer-events:none !important;");
-        });
+        if(type = 1)
+        {
+            $(document).ready(function () {
+                $("#" + name).text("Install");
+                $("#" + name).attr("onclick", "optional.installAddons('" + name + "')");
+                $("#" + name + "-disable").removeAttr("onclick");
+                $("#" + name + "-disable").attr("style", "opacity: 0.3 !important; pointer-events:none !important;");
+            });
+        }
+        else
+        {
+            $(document).ready(function () {
+                $("#" + name).text("Install");
+                $("#" + name).attr("onclick", "optional.installPatch('" + name + "')");
+                $("#" + name + "-disable").removeAttr("onclick");
+                $("#" + name + "-disable").attr("style", "opacity: 0.3 !important; pointer-events:none !important;");
+            });
+        }
+        
     };
 
 
-    jQueryMods.prototype.switchToRestartBtn = function (patchName) {
+    jQueryMods.prototype.switchToRestartBtn = function (name) {
         $(document).ready(function () {
-            $("#" + patchName).text("Restart required...");
-            $("#" + patchName).attr("disabled", "true");
+            $("#" + name).text("Restart required...");
+            $("#" + name).attr("disabled", "true");
         });
     };
 
