@@ -109,6 +109,14 @@
     <script>
         Drassil.parseNews(Drassil.defines[Drassil.realm].news_json);
         Drassil.prepareRealm("azs");
+
+        var totalCount = 5;
+        function ChangeBG() 
+        {
+            var num = Math.ceil( Math.random() * totalCount );
+            $("html, body").css("background-image", "url('../../data/images/background'+num+'.jpg')");
+        }
+        ChangeBG();
     </script>
 </body>
 </html>
