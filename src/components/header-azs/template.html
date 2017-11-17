@@ -54,7 +54,7 @@
         function ChangeIt() 
         {
             var num = Math.ceil( Math.random() * totalCount );
-            $("body").css("background-image", "url('../../data/images/background'+num+'.jpg')");
+            $("html, body").css("background-image", "url('../../data/images/background'+num+'.jpg')");
         }
         ChangeIt();
     });
