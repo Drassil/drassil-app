@@ -51,4 +51,16 @@
     registerComponent("header-azs", false, function () {
         // after rendered
     });
+
+
+    $(document).ready(function(){
+        var totalCount = 5;
+        function ChangeIt() 
+        {
+            var num = Math.ceil( Math.random() * totalCount );
+            document.body.background = '../../data/images/background'+num+'.jpg';
+            document.body.style.backgroundSize = "cover";// Background repeat
+        }
+        ChangeIt();
+    });
 </script>
