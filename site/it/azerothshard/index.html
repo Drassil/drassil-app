@@ -1,4 +1,4 @@
-<html lang="it-IT">
+<html id="prova" lang="it-IT">
     <head>
         <script src="../../../src/pageCheck.js"></script>
         <title>AzerothShard</title>
@@ -23,7 +23,7 @@
 
         </script>
     </head>
-    <body>
+    <body id="prova2">
     <header-azs></header-azs>
     <noscript><center><H1 style="color:red">ENABLE JAVASCRIPT!</H1></center></noscript>
     <div class="container">
@@ -110,14 +110,10 @@
         Drassil.parseNews(Drassil.defines[Drassil.realm].news_json);
         Drassil.prepareRealm("azs");
 
-        $(document).ready(function() {
+        $(document).ready(function(){
             var totalCount = 5;
-            function ChangeBG() 
-            {
-                var num = Math.ceil( Math.random() * totalCount );
-                $("html, body").css("background-image", "url('../../data/images/background'+num+'.jpg')");
-            }
-            ChangeBG();
+            var num = Math.ceil( Math.random() * totalCount );
+            $('html,body').attr({style : 'background-image: url(data/images/background'+num+'.jpg) !important;'});
         });
     </script>
 </body>
