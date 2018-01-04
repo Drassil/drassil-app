@@ -1,15 +1,18 @@
 {
   "name": "drassil-app-web",
   "scripts": {
-    "postinstall" : "npm run submodule-upd",
+    "postinstall": "npm run submodule-upd",
     "build": "webpack --config webpack.config.js --progress --profile --colors",
     "start": "node run.js",
     "start-dev": "node run.js dev",
-    "submodule-upd" : "git submodule update --recursive --init"
+    "submodule-upd": "git submodule update --recursive --init"
+  },
+  "browser": {
+    "vertx": false
   },
   "devDependencies": {
-    "express": "^4.14.0",
-    "script-loader": "*",
-    "webpack": "^1.13.3"
+    "express": "^4.16.2",
+    "script-loader": "^0.7.2",
+    "webpack": "^1.15.0"
   }
 }
