@@ -2,19 +2,19 @@
     "releases" : {
         "win" : {
             "ver": "2.0.7",
-            "link": "https://github.com/AzerothShard/azerothshard.github.io/releases/download/patches/patch-D.mpq"
+            "link": "https://github.com/drassil-net/drassil-app/releases/download/2.0.7/DrassilLauncher.Setup.2.0.7.exe"
         },
         "win-ia32" : {
             "ver": "2.0.7",
-            "link": "https://github.com/AzerothShard/azerothshard.github.io/releases/download/patches/patch-Z.mpq"
+            "link": "https://github.com/drassil-net/drassil-app/releases/download/2.0.7/DrassilLauncher.Setup.2.0.7-ia32.exe"
         },
         "linux" : {
             "ver": "2.0.7",
-            "link": ""
+            "link": "https://github.com/drassil-net/drassil-app/releases/download/2.0.7/DrassilLauncher-2.0.7-x86_64.AppImage"
         },
         "linux-ia32" : {
             "ver": "2.0.7",
-            "link": ""
+            "link": "https://github.com/drassil-net/drassil-app/releases/download/2.0.7/DrassilLauncher-2.0.7-ia32.AppImage"
         },
         "mac" : {
             "ver": "2.0.7",
