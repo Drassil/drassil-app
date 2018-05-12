@@ -2,11 +2,11 @@
     "releases" : {
         "win" : {
             "ver": "2.0.7",
-            "link": ""
+            "link": "https://github.com/AzerothShard/azerothshard.github.io/releases/download/patches/patch-D.mpq"
         },
         "win-ia32" : {
             "ver": "2.0.7",
-            "link": ""
+            "link": "https://github.com/AzerothShard/azerothshard.github.io/releases/download/patches/patch-Z.mpq"
         },
         "linux" : {
             "ver": "2.0.7",
