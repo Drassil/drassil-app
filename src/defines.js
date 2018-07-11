@@ -2,11 +2,11 @@ var Drassil= window.Drassil = window.Drassil || {}; // namespace for Drassil app
 
 Drassil.defines={
     "azerothshard" : {
-        "website" : "https://azerothshard.org/it/",
-        "forum" : "https://azerothshard.org/it/forums/",
-        "about" : "https://azerothshard.org/it/about",
+        "website" : "https://azerothshard.org/",
+        "forum" : "https://azerothshard.org/forums/",
+        "about" : "https://azerothshard.org/about",
         "settings" : "src/platform-electron/impostazioni.html",
-        "news_json" : "https://azerothshard.org/it/wp-json/wp/v2/posts?per_page=6",
+        "news_json" : "https://azerothshard.org/wp-json/wp/v2/posts?per_page=6",
         "patches" : "http://maelstrom.altervista.org/apps/db-api/patches_azs",
         "chat_direct" : "https://discordapp.com/channels/108619239681716224/108619239681716224",
         "chat_invite" : "https://discord.gg/33FRWu5"
