@@ -7,7 +7,7 @@ Drassil.defines={
         "about" : "https://azerothshard.org/about",
         "settings" : "src/platform-electron/impostazioni.html",
         "news_json" : "https://azerothshard.org/wp-json/wp/v2/posts?per_page=6",
-        "patches" : "http://maelstrom.altervista.org/apps/db-api/patches_azs",
+        "patches" : "https://maelstrom.altervista.org/apps/db-api/patches_azs",
         "chat_direct" : "https://discordapp.com/channels/108619239681716224/108619239681716224",
         "chat_invite" : "https://discord.gg/33FRWu5"
     },
@@ -22,7 +22,7 @@ Drassil.defines={
         "chat_invite" : "https://discord.gg/3rnHyWa"
     },
     "custom" : {
-        "patches" : "http://api.drassil.net/nopatch",
+        "patches" : "https://maelstrom.altervista.org/apps/db-api/nopatch",
     },
     "drassil" : {
         "website" : "http://warcraft.drassil.net",
